@@ -5,8 +5,8 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'wvovaw',
   plugins: [
   ],
+  siteName: 'wvovaw',
   siteUrl: 'https://wvovaw.github.io',
 }

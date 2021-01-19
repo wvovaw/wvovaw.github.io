@@ -1,13 +1,16 @@
 <template>
     <div id="grid">
-        <div id="title">
-            <h1>{{ title }}</h1>
-        </div>
+        <a :href="link">
+            <div id="title">
+                <h1>{{ title }}</h1>
+            </div>
+        </a>
         <div id="description">
             <p>{{ description }}</p>
         </div>
-        <!-- <g-image id="image" src="~/images/avatar.jpg" width="200"></g-image> -->
-        <g-image id="image" :src="setImage" ></g-image>
+        <div id="image">
+            <g-image :src="setImage" ></g-image>
+        </div>
     </div>
 </template>
 
@@ -17,6 +20,7 @@ export default {
         'title',
         'description',
         'image',
+        'link'
     ],
     computed: {
         setImage: function() {
@@ -27,13 +31,25 @@ export default {
 </script>
 
 <style scoped>
+a, a:visited {
+  text-decoration: none;
+  color: #859900;
+}
+a:hover {
+    text-decoration: underline;
+    color: #859900;
+    cursor: pointer;
+}
 #title {
     grid-area: title;
-    padding: 0 40px;
+    padding: 10px 0 0 20px;
     font-family: Roboto Slab;
 }
 #description {
     grid-area: description;
+    padding: 0 20px;
+    font-family: Poppins;
+    color: #586e75;
 }
 #image {
     grid-area: image;
@@ -41,16 +57,15 @@ export default {
 #grid {
     display: grid;
     grid-template-areas: 
-        "title title title image image"
-        "description description description image image"
-        "footer footer footer image image";
+        "title title image image"
+        "description description image image";
     grid-gap: 10px;
-    grid-template-rows: 60px 1fr 30px;
-    grid-template-columns: 150px 1fr;
+    grid-template-rows: 50px auto;
+    grid-template-columns: 500px 1fr;
 
     padding: 10px;
 }
 img {
-    width: 200px;
+    width: 300px;
 }
 </style>

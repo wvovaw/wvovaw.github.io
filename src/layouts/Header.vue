@@ -34,7 +34,7 @@ a, a:active, a:visited {
   color: #2aa198;
 }
 a.active--exact.active {
-  color: #859900;
+  color: #cb4b16;
 }
 
 .nav__link {

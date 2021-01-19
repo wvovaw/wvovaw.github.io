@@ -1,32 +1,40 @@
 <template>
-  <div class="about section">
+  <div class="projects">
     <div class="flexbox">
-      <ProjectEntity class="entity"
-        title="Title 1"
-        description="Lorem Ipsum blablabla daddadada ahahah"
-        image="avatar.jpg"
-      />
-      <ProjectEntity class="entity"
-        title="Title 2"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum molestias velit quaerat qui ea laudantium eveniet, amet suscipit neque veniam?
-"
-        image="avatar.jpg"
-      />
-      <ProjectEntity class="entity"
-        title="Title 3"
-        description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, fugit!"
-        image="avatar.jpg"
+      <ProjectEntity v-for="edge in $static.projects.edges" :key="edge.node.id"
+        class="entity"
+        :title="edge.node.title"
+        :description="edge.node.description"
+        :image="edge.node.image"
+        :link="edge.node.link"
       />
     </div>
   </div>
-    </template>
+</template>
+
+<static-query>
+query {
+  projects: allProject {
+    edges {
+      node {
+        id
+        title
+        description
+        image
+        link
+      }
+    }
+  }
+}
+</static-query>
+
 <script>
 export default {
 }
 </script>
 
 <style scoped>
-.about {
+.projects {
     width: 100%;
     background-color: #073642;
 }

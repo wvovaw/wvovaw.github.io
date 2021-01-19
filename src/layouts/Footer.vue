@@ -40,10 +40,15 @@ footer {
   line-height: 60px;
 }
 
-a, a:active, a:visited {
+a {
   color: #2aa198;
   text-decoration: none;
   float: none;
+}
+a:hover {
+    text-decoration: underline;
+    color: #cb4b16;
+    cursor: pointer;
 }
 svg {
   height: 30px;

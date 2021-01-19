@@ -1,5 +1,5 @@
 <template>
-  <div class="title section">
+  <div class="title">
       <div class="container">
         <h1>Hello, this is wvovaw's personal page!</h1>
         <p> I'm a general purpose developer.</p>
@@ -15,7 +15,7 @@
 
 <style scoped>
 .container {
-    padding: 0 200px 50px 200px;
+    padding: 0 200px 55px 200px;
 }
 .title {
     font-size: 2em;
