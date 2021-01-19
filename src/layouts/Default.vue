@@ -1,37 +1,39 @@
 <template>
   <div class="layout">
-    <header class="header">
-        <g-link class="logo__link" to="/">{{ $static.metadata.siteName }}</g-link>
-      <nav class="nav">
-        <g-link class="nav__link" to="/#projects">Projects</g-link>
-        <g-link class="nav__link" to="/#contact">Contact</g-link>
-      </nav>
-    </header>
+    <a href="https://github.com/wvovaw/wvovaw.github.io" class="github-corner" aria-label="Fork me on GitHub">
+      <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 250 250" fill="#2aa198" style="position: absolute; top: 0; right: 0">
+        <path d="M0 0l115 115h15l12 27 108 108V0z" fill="#073642"/>
+        <path class="octo-arm" d="M128 109c-15-9-9-19-9-19 3-7 2-11 2-11-1-7 3-2 3-2 4 5 2 11 2 11-3 10 5 15 9 16" style="-webkit-transform-origin: 130px 106px; transform-origin: 130px 106px"/>
+        <path class="octo-body" d="M115 115s4 2 5 0l14-14c3-2 6-3 8-3-8-11-15-24 2-41 5-5 10-7 16-7 1-2 3-7 12-11 0 0 5 3 7 16 4 2 8 5 12 9s7 8 9 12c14 3 17 7 17 7-4 8-9 11-11 11 0 6-2 11-7 16-16 16-30 10-41 2 0 3-1 7-5 11l-12 11c-1 1 1 5 1 5z"/>
+      </svg>
+    </a>
+    <Header />
+    <Title />
     <About />
-    <Contacts />
+    <Projects />
+    <Footer />
   </div>
 </template>
 
 <script>
+import Header from "./Header"
+import Title from "./Title"
 import About from "./About"
-import Contacts from "./Contacts"
+import Projects from "./Projects"
+import Footer from "./Footer"
 export default {
   components: {
+    Header,
+    Title,
     About,
-    Contacts
+    Projects,
+    Footer
   }
 }
 </script>
 
-<static-query>
-query {
-  metadata {
-    siteName
-  }
-}
-</static-query>
-
 <style>
+.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}
 body {
   font-family: Poppins;
   margin:0;
@@ -44,32 +46,7 @@ body {
   margin: 0 auto;
 }
 
-.header {
-  font-family: Roboto Slab;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100px;
-  background-color: #002b36;
-  padding: 0 200px 0 200px;
-}
-
-a, a:active, a:visited {
-  text-decoration: none;
-  color: #2aa198;
-}
-a.active--exact.active {
-  color: #859900;
-}
-
-.nav__link {
-  margin-left: 40px;
-}
-.logo__link {
-  font-size: 25px;
-}
-
-.section {
-  border: 1px solid black;
+h1 {
+  margin: 0;
 }
 </style>

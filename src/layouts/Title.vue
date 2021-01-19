@@ -1,15 +1,23 @@
 <template>
-  <div class="about section">
+  <div class="title section">
       <div class="container">
+        <h1>Hello, this is wvovaw's personal page!</h1>
+        <p> I'm a general purpose developer.</p>
+        <p> I'm used to create bots, web apps, simple statick websites; </p>
+        <p> Also, I have done some special purpose math aim programs. <span id="caret" aria-hidden="true"></span></p>
       </div>
   </div>
 </template>
+
+<script>
+
+</script>
 
 <style scoped>
 .container {
     padding: 0 200px 50px 200px;
 }
-.about {
+.title {
     font-size: 2em;
     color: #839496;
     width: 100%;
