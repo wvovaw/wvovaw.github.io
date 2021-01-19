@@ -1,6 +1,7 @@
 <template>
   <div class="projects">
     <div class="flexbox">
+      <h1 id="projects"><a href="#projects" aria-hidden="true"></a>My projects</h1>
       <ProjectEntity v-for="edge in $static.projects.edges" :key="edge.node.id"
         class="entity"
         :title="edge.node.title"
@@ -34,6 +35,11 @@ export default {
 </script>
 
 <style scoped>
+h1 {
+  font-family: Roboto Slab;
+  color: #657b83;
+  padding: 20px 0 20px 0;
+}
 .projects {
     width: 100%;
     background-color: #073642;

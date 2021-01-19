@@ -9,7 +9,6 @@
     </a>
     <Header />
     <Title />
-    <About />
     <Projects />
     <Footer />
   </div>

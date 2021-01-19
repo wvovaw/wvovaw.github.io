@@ -3,7 +3,7 @@
         <g-link class="logo__link" to="/">{{ $static.metadata.siteName }}</g-link>
       <nav class="nav">
         <g-link class="nav__link" to="/#about">About</g-link>
-        <g-link class="nav__link" to="/#projects">Projects</g-link>
+        <a class="nav__link" href="/#projects">Projects</a>
         <g-link class="nav__link" to="/#contact">Contact</g-link>
       </nav>
     </header>
