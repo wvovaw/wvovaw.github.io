@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{iyQ6:function(e,t,n){"use strict";n.r(t);var a={metaInfo:{title:"Wvovaw's personal page"}},l=n("KHd+"),o=Object(l.a)(a,(function(){var e=this.$createElement;return(this._self._c||e)("Layout")}),[],!1,null,null,null);t.default=o.exports}}]);
