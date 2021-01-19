@@ -3,8 +3,8 @@
       <div class="container">
         <h1>Hello, this is wvovaw's personal page!</h1>
         <p> I'm a general purpose developer.</p>
-        <p> I'm used to create bots, web apps, simple statick websites; </p>
-        <p> Also, I have done some special purpose math aim programs. <span id="caret" aria-hidden="true"></span></p>
+        <p> I'm used to create bots, web apps, cli tools etc. </p>
+        <p> I like to create usefool tools, config enviroment and automate things. <span id="caret" aria-hidden="true"></span></p>
       </div>
   </div>
 </template>

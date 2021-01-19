@@ -1,7 +1,7 @@
 <template>
   <div class="projects">
     <div class="flexbox">
-      <h1 id="projects"><a href="#projects" aria-hidden="true"></a>My projects</h1>
+      <h1 id="projects">My projects</h1>
       <ProjectEntity v-for="edge in $static.projects.edges" :key="edge.node.id"
         class="entity"
         :title="edge.node.title"

@@ -10,6 +10,7 @@
     <Header />
     <Title />
     <Projects />
+    <Contact />
     <Footer />
   </div>
 </template>
@@ -17,15 +18,15 @@
 <script>
 import Header from "./Header"
 import Title from "./Title"
-import About from "./About"
 import Projects from "./Projects"
+import Contact from "./Contact"
 import Footer from "./Footer"
 export default {
   components: {
     Header,
     Title,
-    About,
     Projects,
+    Contact,
     Footer
   }
 }
