@@ -1,7 +1,7 @@
 <template>
-<div class="contact">
-    <h1 id="contact">Contact me</h1>
-    <footer>
+<div id="container">
+    <h1 id="contact-me">Contact me</h1>
+    <div id="contact">
       <nav class="nav">
         <a class="nav__link" href="https://github.com/wvovaw">
           <svg viewBox="0 0 100 100" aria-hidden="true" role="img">
@@ -23,7 +23,7 @@
           </svg>
         </a>
       </nav>
-    </footer>
+    </div>
   </div>
 </template>
 
@@ -34,12 +34,12 @@ h1 {
   padding: 20px 0 20px 0;
 }
 
-.contact {
+#container {
   background-color: #002b36;
   padding: 0 200px 50px 200px;
 }
 
-footer {
+#contact {
   font-family: Roboto Slab;
   text-align: center;
   float: none;

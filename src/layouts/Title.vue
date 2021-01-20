@@ -9,10 +9,6 @@
   </div>
 </template>
 
-<script>
-
-</script>
-
 <style scoped>
 .container {
     padding: 0 200px 55px 200px;

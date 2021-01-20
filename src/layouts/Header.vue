@@ -1,9 +1,9 @@
 <template>
     <header class="header">
-        <g-link class="logo__link" to="/">{{ $static.metadata.siteName }}</g-link>
+        <a class="logo__link" href="/">{{ $static.metadata.siteName }}</a>
       <nav class="nav">
         <a class="nav__link" href="/#projects">Projects</a>
-        <g-link class="nav__link" to="/#contact">Contact</g-link>
+        <a class="nav__link" href="/#contact-me">Contact</a>
       </nav>
     </header>
 </template>
@@ -28,12 +28,18 @@ query {
   padding: 0 200px 0 200px;
 }
 
-a, a:active, a:visited {
+a, a:visited {
+  text-decoration: none;
+  color: #859900;
+}
+a:hover {
+    text-decoration: underline;
+    color: #859900;
+    cursor: pointer;
+}
+a, a:active {
   text-decoration: none;
   color: #2aa198;
-}
-a.active--exact.active {
-  color: #cb4b16;
 }
 
 .nav__link {

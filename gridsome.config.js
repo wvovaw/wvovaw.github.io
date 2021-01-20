@@ -9,4 +9,5 @@ module.exports = {
   ],
   siteName: 'wvovaw',
   siteUrl: 'https://wvovaw.github.io',
+  titleTemplate: '%s'
 }
