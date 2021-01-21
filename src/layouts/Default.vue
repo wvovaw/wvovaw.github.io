@@ -46,13 +46,6 @@ body {
   background-color: #073642;
 }
 
-#layout {
-}
-#content-wrapper {
-}
-#footer {
-}
-
 h1 {
   margin: 0;
 }

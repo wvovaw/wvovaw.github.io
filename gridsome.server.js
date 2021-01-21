@@ -6,27 +6,12 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = function (api) {
-  // api.loadSource(({ addCollection }) => {
-  //   // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
-  //   const projects = addCollection('Projects')
-  //   projects.addNode({
-  //     id: '0',
-  //     title: 'Anonimalus',
-  //     description: 'Discord.js bot for anonimous messaging.',
-  //     image: 'anonimalus.jpg'
-  //   })
-  // })
-
-  // api.createPages(({ createPage }) => {
-  //   // Use the Pages API here: https://gridsome.org/docs/pages-api/
-  // })
-
   // Add collection
   api.loadSource(actions => {
     const projects = actions.addCollection({
       typeName: 'Project'
     })
-
+  // Add a node to this collection
     projects.addNode({
       id: '5',
       title: 'LSApproximation',
