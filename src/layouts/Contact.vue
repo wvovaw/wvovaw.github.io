@@ -31,12 +31,13 @@
 h1 {
   font-family: Roboto Slab;
   color: #657b83;
-  padding: 20px 0 20px 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 #container {
   background-color: #002b36;
-  padding: 0 200px 50px 200px;
+  padding: 0 15% 5% 15%;
 }
 
 #contact {
@@ -62,7 +63,12 @@ a:hover {
     cursor: pointer;
 }
 svg {
-  height: 60px;
-  margin: 0 40px 0 40px;
+  height: 4em;
+  margin: 0 4% 0 4%;
+}
+@media (max-width: 600px) {
+  svg {
+    height: 2em;
+  }
 }
 </style>

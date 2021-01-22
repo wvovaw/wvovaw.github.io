@@ -1,6 +1,6 @@
 <template>
-  <div class="projects">
-    <div class="flexbox">
+  <div id="projects">
+    <div id="flexbox">
       <h1 id="projects">My projects</h1>
       <ProjectEntity v-for="edge in $static.projects.edges" :key="edge.node.id"
         class="entity"
@@ -38,21 +38,28 @@ export default {
 h1 {
   font-family: Roboto Slab;
   color: #657b83;
-  padding: 20px 0 20px 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-.projects {
+#projects {
     width: 100%;
     background-color: #073642;
 }
 .entity {
   background-color: #002b36;
-  margin: 20px 0 20px 0;
+  /* margin: 20px 0 20px 0; */
+  margin-bottom: 8%;
 }
-.flexbox {
-  padding: 0 200px 50px 200px;
+#flexbox {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 0 5% 0% 5%;
+}
+@media (min-width: 600px){
+  #flexbox {
+    padding: 0 15% 5% 15%;
+  }
 }
 </style>
 

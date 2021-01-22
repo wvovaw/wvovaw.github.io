@@ -1,6 +1,6 @@
 <template>
-  <div class="title">
-      <div class="container">
+  <div id="title">
+      <div id="container">
         <h1>Hello, this is wvovaw's personal page!</h1>
         <p> I'm a general purpose developer.</p>
         <p> I'm used to create bots, web apps, cli tools etc. </p>
@@ -10,14 +10,24 @@
 </template>
 
 <style scoped>
-.container {
-    padding: 0 200px 55px 200px;
+#container {
+  padding: 0 15% 4% 15%;
 }
-.title {
-    font-size: 2em;
-    color: #839496;
-    width: 100%;
-    background-color: #002b36;
+@media (min-width: 1024px) {
+  #title {
+      font-size: 2em;
+      color: #839496;
+      width: 100%;
+      background-color: #002b36;
+  }
+}
+@media (max-width: 1023px) {
+  #title {
+      font-size: 1em;
+      color: #839496;
+      width: 100%;
+      background-color: #002b36;
+  }
 }
 #caret {
   border-right: .05em solid;
@@ -29,4 +39,5 @@
     border-color: transparent;
   }
 }
+
 </style>

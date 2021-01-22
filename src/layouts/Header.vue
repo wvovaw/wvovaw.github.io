@@ -23,9 +23,9 @@ query {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
   background-color: #002b36;
-  padding: 0 200px 0 200px;
+  height: 6.5em;
+  padding: 0 15% 0 15%;
 }
 
 a, a:visited {
@@ -47,5 +47,10 @@ a, a:active {
 }
 .logo__link {
   font-size: 25px;
+}
+@media (max-width: 320px) {
+  .nav__link {
+    display: none;
+  }
 }
 </style>

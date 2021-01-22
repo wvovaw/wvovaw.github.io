@@ -49,4 +49,15 @@ body {
 h1 {
   margin: 0;
 }
+
+@media (max-width: 320px) {
+  h1 {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 767px){
+  .github-corner {
+    display: none;
+  }
+}
 </style>
