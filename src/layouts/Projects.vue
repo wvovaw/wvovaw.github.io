@@ -6,6 +6,7 @@
         class="entity"
         :title="edge.node.title"
         :description="edge.node.description"
+        :techs="edge.node.techs"
         :image="edge.node.image"
         :link="edge.node.link"
       />
@@ -21,6 +22,10 @@ query {
         id
         title
         description
+        techs {
+          tech
+          color
+        }
         image
         link
       }

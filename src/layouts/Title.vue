@@ -11,7 +11,7 @@
 
 <style scoped>
 #container {
-  padding: 0 15% 4% 15%;
+  padding: 0 15% 10% 15%;
 }
 @media (min-width: 1024px) {
   #title {

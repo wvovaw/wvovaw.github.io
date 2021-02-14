@@ -27,7 +27,6 @@ query {
   height: 6.5em;
   padding: 0 15% 0 15%;
 }
-
 a, a:visited {
   text-decoration: none;
   color: #859900;
@@ -36,10 +35,6 @@ a:hover {
     text-decoration: underline;
     color: #859900;
     cursor: pointer;
-}
-a, a:active {
-  text-decoration: none;
-  color: #2aa198;
 }
 
 .nav__link {

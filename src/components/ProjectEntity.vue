@@ -1,83 +1,115 @@
 <template>
-    <div id="grid">
-        <a :href="link">
-            <div id="title">
-                <h1>{{ title }}</h1>
-            </div>
-        </a>
-        <div id="description">
-            <p>{{ description }}</p>
-        </div>
-        <div id="image">
-            <g-image :src="setImage" ></g-image>
-        </div>
+  <div id="grid">
+    <h1 id="title"><a :href="link">{{ title }}</a></h1>
+    <div id="description">
+      <p>{{ description }}</p>
     </div>
+    <div id="chips-bar">
+      <div
+        id="chips"
+        v-for="_tech in techs"
+        :key="_tech.tech + title"
+        :style="'background-color:' + _tech.color"
+      >
+        {{ _tech.tech }}
+      </div>
+    </div>
+    <div id="image">
+      <g-image :src="setImage" ></g-image>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-    props: [
-        'title',
-        'description',
-        'image',
-        'link'
-    ],
-    computed: {
-        setImage: function() {
-            return require("~/assets/images/" + this.image);
-        }
+  props: [
+    'title',
+    'description',
+    'techs',
+    'image',
+    'link'
+  ],
+  computed: {
+    setImage: function() {
+      return require("~/assets/images/" + this.image);
     }
+  }
 }
 </script>
 
-<style scoped>
+<style lang="css" scoped>
 a, a:visited {
   text-decoration: none;
   color: #859900;
 }
 a:hover {
-    text-decoration: underline;
-    color: #859900;
-    cursor: pointer;
+  text-decoration: underline;
+  color: #859900;
+  cursor: pointer;
 }
 #title {
-    grid-area: title;
-    padding: 5% 0 0 5%;
-    font-family: Roboto Slab;
+  grid-area: title;
+  padding: 5% 0 0 5%;
+  font-family: Roboto Slab;
 }
 #description {
-    grid-area: description;
-    padding: 5% 5%;
-    font-family: Poppins;
-    color: #586e75;
+  grid-area: description;
+  padding: 10% 5%;
+  font-family: Poppins;
+  color: #586e75;
+}
+#chips-bar {
+  grid-area: chips;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 0 0 5% 5%;
+}
+#chips {
+  align-self: flex-end;
+  background-color: grey;
+  border-radius: 90px;
+  height: max-content;
+  padding: 0 1em 0 1em;
+  margin: 0 1em 0.5em 0;
 }
 #image {
-    grid-area: image;
-    padding: 4%;
+  grid-area: image;
+  max-width: 350px;
+  max-height: 350px;
+  padding: 4%;
 }
 img {
-    width: 100%;
-    max-width: 900px;
-    float: rihgt;
+  width: 100%;
+  float: rihgt;
 }
 #grid {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.5);
 }
-@media (min-width: 1024px){
-    #grid {
-        display: grid;
-        grid-template-areas: 
-            "title image"
-            "description image";
-        grid-gap: 4%;
-        grid-template-rows: 5em 1fr;
-        grid-template-columns: 30em 1fr;
-        padding: 10px;
-    }
-    #image {
-        margin-left: auto;
-    }
+@media screen and (min-width: 1024px) {
+  #grid {
+    display: grid;
+    grid-template-areas: 
+      "title image"
+      "description image"
+      "chips image";
+    grid-template-rows: 2em auto auto;
+    grid-template-columns: 30em 1fr;
+    padding: 10px;
+  }
+  #grid:last-child {
+    margin-bottom: 0;
+  }
+  #image {
+    margin-left: auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  #image {
+    align-self: center;
+  }
 }
 </style>
