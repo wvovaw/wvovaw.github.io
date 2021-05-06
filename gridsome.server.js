@@ -13,20 +13,20 @@ module.exports = function (api) {
     })
   // Add a node to this collection
     projects.addNode({
-      id: '5',
+      id: '6',
       title: 'LSApproximation',
-      description: 'Least square approximation app writen on c++ and qt.',
+      description: 'Least square approximation app writen on C++ and Qt.',
       techs: [
-        { tech: 'c++17', color: '#6090bc'},
-        { tech: 'qt', color: '#40c44c'},
-        { tech: 'qtchart', color: '#40c44c'}
+        { tech: 'C++17', color: '#6090bc'},
+        { tech: 'Qt', color: '#40c44c'},
+        { tech: 'QtChart', color: '#40c44c'}
       ],
       image: 'lsa.png',
       link: 'https://github.com/wvovaw/LSApproximation'
     })
 
     projects.addNode({
-      id: '4',
+      id: '5',
       title: 'Balda, the game',
       description: 'The Russian pen-and-paper game where players should build as long words as possible.',
       techs: [
@@ -40,7 +40,7 @@ module.exports = function (api) {
     })
 
     projects.addNode({
-      id: '3',
+      id: '4',
       title: 'Twitch bot',
       description: 'It does what it\'s told.',
       techs: [
@@ -52,7 +52,7 @@ module.exports = function (api) {
     })
 
     projects.addNode({
-      id: '2',
+      id: '3',
       title: 'Vuejs vocabulary app',
       description: 'Vocabulary training web app.\n1) Add word, translation, image;\n2) Train words in quiz;\n3) Memorize them!',
       techs: [
@@ -65,7 +65,7 @@ module.exports = function (api) {
     })
 
     projects.addNode({
-      id: '1',
+      id: '2',
       title: 'Clyrics',
       description: 'Search and read song lyrics from your terminal!',
       techs: [
@@ -77,7 +77,7 @@ module.exports = function (api) {
     })
 
     projects.addNode({
-      id: '0',
+      id: '1',
       title: 'Anonimalus',
       description: 'Discord.js bot for anonymous messaging.',
       techs: [
@@ -87,6 +87,19 @@ module.exports = function (api) {
       ],
       image: 'anon.png',
       link: 'https://wvovaw.github.io/anonimalus'
+    })
+
+    projects.addNode({
+      id: '0',
+      title: 'Gif Wallpaper',
+      description: 'Set gif as wallpapers on OS Windows',
+      techs: [
+        { tech: 'C', color: '#a8b9cc'},
+        { tech: 'C++17', color: '#6090bc'},
+        { tech: 'qt', color: '#40c44c'},
+      ],
+      image: 'gw.png',
+      link: 'https://github.com/wvovaw/gw-gui'
     })
   })
 }
