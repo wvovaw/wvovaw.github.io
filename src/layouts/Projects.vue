@@ -40,18 +40,19 @@ export default {
 </script>
 
 <style scoped>
+
 h1 {
   font-family: Roboto Slab;
-  color: #657b83;
+  color: var(--foreground);
   padding-top: 20px;
   padding-bottom: 20px;
 }
 #projects {
     width: 100%;
-    background-color: #073642;
+    background-color: var(--background-alt);
 }
 .entity {
-  background-color: #002b36;
+  background-color: var(--background);
   /* margin: 20px 0 20px 0; */
   margin-bottom: 8%;
 }

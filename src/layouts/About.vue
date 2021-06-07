@@ -6,14 +6,15 @@
 </template>
 
 <style scoped>
+
 .container {
     padding: 0 200px 50px 200px;
 }
 .about {
     font-size: 2em;
-    color: #839496;
+    color: var(--gray-color);
     width: 100%;
-    background-color: #002b36;
+    background-color: var(--background);
 }
 #caret {
   border-right: .05em solid;

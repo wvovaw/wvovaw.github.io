@@ -26,3 +26,6 @@ export default function (Vue, { router, head, isClient }) {
     href: 'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap'
   })
 }
+
+import '~/assets/styles/solarized.css'
+import '~/assets/styles/gruvbox.css'

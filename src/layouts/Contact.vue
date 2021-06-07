@@ -1,6 +1,7 @@
 <template>
 <div id="container">
     <h1 id="contact-me">Contact me</h1>
+    <p> If you'd like to ask something or get help, feel free to contact me.</p>
     <div id="contact">
       <nav class="nav">
         <a class="nav__link" href="https://github.com/wvovaw">
@@ -40,15 +41,16 @@
 </template>
 
 <style scoped>
+
 h1 {
   font-family: Roboto Slab;
-  color: #657b83;
+  color: var(--foreground);
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
 #container {
-  background-color: #002b36;
+  background-color: var(--background);
   padding: 0 15% 5% 15%;
 }
 
@@ -63,19 +65,22 @@ h1 {
   height: auto;
   line-height: 20px;
 }
+p {
+  color: var(--foreground-alt);
+}
 a {
-  color: #2aa198;
+  color: var(--aqua-color);
   text-decoration: none;
   float: none;
 }
 a:hover {
     text-decoration: underline;
-    color: #cb4b16;
+    color: var(--orange-color);
     cursor: pointer;
 }
 svg {
   height: 4em;
-  margin: 0 4% 0 4%;
+  margin: 4% 4% 0 4%;
 }
 #music {
   display: none;

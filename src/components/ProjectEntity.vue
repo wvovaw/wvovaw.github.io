@@ -38,13 +38,14 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
 a, a:visited {
   text-decoration: none;
-  color: #859900;
+  color: var(--green-color);
 }
 a:hover {
   text-decoration: underline;
-  color: #859900;
+  color: var(--green-color);
   cursor: pointer;
 }
 #title {
@@ -56,7 +57,7 @@ a:hover {
   grid-area: description;
   padding: 10% 5%;
   font-family: Poppins;
-  color: #586e75;
+  color: var(--foreground-alt);
 }
 #chips-bar {
   grid-area: chips;
