@@ -11,6 +11,10 @@
   "dependencies": {
     "gh-pages": "^3.1.0",
     "gridsome": "^0.7.0",
-    "normalize.css": "^8.0.1"
-  }
+    "normalize.css": "^8.0.1",
+    "setimmediate": "^1.0.5",
+    "vue-youtube": "^1.4.0",
+    "vue2-flip-countdown": "^0.11.1"
+  },
+  "devDependencies": {}
 }
