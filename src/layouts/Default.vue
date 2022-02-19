@@ -42,7 +42,7 @@ export default {
         'solarized-dark',
         'gruvbox-light',
         'solarized-light',
-        'black-and-white'
+        // 'black-and-white'
       ]
     }
   },

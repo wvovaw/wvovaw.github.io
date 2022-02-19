@@ -13,11 +13,11 @@
     "gridsome": "^0.7.0",
     "normalize.css": "^8.0.1",
     "setimmediate": "^1.0.5",
-    "vue-disqus": "^4.0.1",
     "vue-youtube": "^1.4.0"
   },
   "devDependencies": {
     "node-sass": "^6.0.0",
-    "sass-loader": "^10.1.1"
+    "sass-loader": "^10.1.1",
+    "vue-svg-loader": "^0.16.0"
   }
 }
