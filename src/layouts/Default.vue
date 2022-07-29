@@ -10,7 +10,6 @@
       </a>
       <Header @nextColorscheme="nextColorscheme"/>
       <Title />
-      <Slavery />
       <Projects />
       <Contact />
     </div> 
@@ -21,7 +20,6 @@
 <script>
 import Header from "./Header"
 import Title from "./Title"
-import Slavery from "./Slavery"
 import Projects from "./Projects"
 import Contact from "./Contact"
 import Footer from "./Footer"
@@ -29,7 +27,6 @@ export default {
   components: {
     Header,
     Title,
-    Slavery,
     Projects,
     Contact,
     Footer
