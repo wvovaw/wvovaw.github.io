@@ -28,3 +28,4 @@ export default function (Vue, { router, head, isClient }) {
 
 import '~/assets/styles/solarized.css'
 import '~/assets/styles/gruvbox.css'
+import '~/assets/styles/nord.css'

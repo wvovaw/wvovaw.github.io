@@ -36,10 +36,11 @@ export default {
       colorscheme : "",
       colorschemes: [
         'gruvbox-dark',
-        'solarized-dark',
         'gruvbox-light',
+        'solarized-dark',
         'solarized-light',
-        // 'black-and-white'
+        'nord-light',
+        'nord-dark',
       ]
     }
   },
@@ -65,22 +66,14 @@ export default {
         this.colorschemes.push(c);
       }
     }
-
     localStorage.setItem('colorscheme', this.colorscheme);
     document.getElementById('app').className = this.colorscheme;
   }
 }
 </script>
 
-<style>
-.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}
-.octo {
-  fill: var(--aqua-color, #fff);
-}
-.octo-frame {
-  fill: var(--background-alt, #000);
-}
-html {height: 100%;}
+<style lang="scss">
+html { height: 100%; }
 body {
   font-family: Poppins;
   margin:0;
@@ -90,22 +83,36 @@ body {
   background-color: var(--background-alt);
 }
 
+.github-corner {
+  &:hover .octo-arm {
+    animation:octocat-wave 560ms ease-in-out;
+  }
+  @media (max-width: 767px){
+    display: none
+  }
+  @keyframes octocat-wave{
+    0%,100%{
+      transform:rotate(0)
+    }
+    20%,60%{
+      transform:rotate(-25deg)
+    }
+    40%,80%{
+      transform:rotate(10deg)
+    }
+  }
+}
+.octo { fill: var(--aqua-color, #fff); }
+.octo-frame { fill: var(--background-alt, #000); }
+
 ::selection {
   background-color: var(--aqua-color);
 }
 
 h1 {
   margin: 0;
-}
-
-@media (max-width: 320px) {
-  h1 {
+  @media (max-width: 320px) {
     font-size: 1.5em;
-  }
-}
-@media (max-width: 767px){
-  .github-corner {
-    display: none;
   }
 }
 </style>

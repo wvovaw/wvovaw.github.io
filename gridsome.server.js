@@ -15,7 +15,7 @@ module.exports = function (api) {
     projects.addNode({
       id: '6',
       title: 'LSApproximation',
-      description: 'Least square approximation app writen on C++ and Qt.',
+      description: 'Least square approximation method app writen on C++ and Qt.\n(I made it as my coursework in the computational math class)',
       techs: [
         { tech: 'C++17', color: '#6090bc'},
         { tech: 'Qt', color: '#40c44c'},
@@ -28,7 +28,7 @@ module.exports = function (api) {
     projects.addNode({
       id: '5',
       title: 'Balda, the game',
-      description: 'The Russian pen-and-paper game where players should build as long words as possible.',
+      description: 'The Russian pen-and-paper word game where players should build as long words as possible.',
       techs: [
         { tech: 'Node.js', color: '#3C873A'},
         { tech: 'Electron', color: '#303444'},
@@ -79,7 +79,7 @@ module.exports = function (api) {
     projects.addNode({
       id: '1',
       title: 'Anonimalus',
-      description: 'Discord.js bot for anonymous messaging.',
+      description: 'Discord.js bot for anonymous messaging. Invite it to your server to send anonymous messages to your friends.',
       techs: [
         { tech: 'Node.js', color: '#3C873A'},
         { tech: 'Discord.js', color: '#738ADB'},
@@ -92,7 +92,7 @@ module.exports = function (api) {
     projects.addNode({
       id: '0',
       title: 'Gif Wallpaper',
-      description: 'Set gif as wallpapers on OS Windows',
+      description: 'Set gif images as a wallpapers on OS Windows.\nIts backend is written on C and frontend on C++ with QT.',
       techs: [
         { tech: 'C', color: '#a8b9cc'},
         { tech: 'C++17', color: '#6090bc'},

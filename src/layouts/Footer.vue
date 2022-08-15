@@ -1,10 +1,10 @@
 <template>
     <footer>
-      Made with Gridsome. 2021
+      Made with Gridsome. 2021 - 2022
     </footer>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 footer {
   font-family: Roboto Slab;
   text-align: center;
@@ -16,5 +16,4 @@ footer {
   height: 30px;
   line-height: 30px;
 }
-
 </style>

@@ -1,6 +1,7 @@
 {
   "name": "personal",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",

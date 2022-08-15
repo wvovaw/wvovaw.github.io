@@ -35,41 +35,6 @@ query {
 </static-query>
 
 <script>
-export default {
-}
-</script>
-
-<style scoped>
-
-h1 {
-  font-family: Roboto Slab;
-  color: var(--foreground);
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-#projects {
-    width: 100%;
-    background-color: var(--background-alt);
-}
-.entity {
-  background-color: var(--background);
-  /* margin: 20px 0 20px 0; */
-  margin-bottom: 8%;
-}
-#flexbox {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 0 5% 0% 5%;
-}
-@media (min-width: 600px){
-  #flexbox {
-    padding: 0 15% 5% 15%;
-  }
-}
-</style>
-
-<script>
 import ProjectEntity from '../components/ProjectEntity'
 export default {
   components: {
@@ -77,3 +42,29 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+h1 {
+  font-family: Roboto Slab;
+  color: var(--foreground);
+  padding: 20px 0 20px;
+}
+#projects {
+  width: 100%;
+  background-color: var(--background-alt);
+}
+.entity {
+  background-color: var(--background);
+  margin-bottom: 8%;
+}
+#flexbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 5% 0% 5%;
+
+  @media (min-width: 600px) {
+    padding: 0 15% 5% 15%
+  }
+}
+</style>
