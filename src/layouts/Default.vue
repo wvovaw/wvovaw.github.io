@@ -1,6 +1,6 @@
 <template>
-  <div :class="colorscheme" id="layout">
-    <div id="content-wrapper">
+  <div :class="colorscheme" class="layout">
+    <div class="content">
       <a href="https://github.com/wvovaw/wvovaw.github.io" class="github-corner" aria-label="Fork me on GitHub">
         <svg class="octo" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 250 250" fill="#fff" style="position: absolute; top: 0; right: 0">
           <path class="octo-frame" d="M0 0l115 115h15l12 27 108 108V0z" fill="#000"/>
@@ -8,24 +8,24 @@
           <path class="octo-body" d="M115 115s4 2 5 0l14-14c3-2 6-3 8-3-8-11-15-24 2-41 5-5 10-7 16-7 1-2 3-7 12-11 0 0 5 3 7 16 4 2 8 5 12 9s7 8 9 12c14 3 17 7 17 7-4 8-9 11-11 11 0 6-2 11-7 16-16 16-30 10-41 2 0 3-1 7-5 11l-12 11c-1 1 1 5 1 5z"/>
         </svg>
       </a>
-      <Header @nextColorscheme="nextColorscheme"/>
+      <Navbar @nextColorscheme="nextColorscheme"/>
       <Title />
       <Projects />
       <Contact />
     </div> 
-    <Footer id="footer" />
+    <Footer class="footer" />
   </div>
 </template>
 
 <script>
-import Header from "./Header"
+import Navbar from "./Navbar"
 import Title from "./Title"
 import Projects from "./Projects"
 import Contact from "./Contact"
 import Footer from "./Footer"
 export default {
   components: {
-    Header,
+    Navbar,
     Title,
     Projects,
     Contact,
@@ -53,7 +53,7 @@ export default {
       document.getElementById('app').className = this.colorscheme;
     }
   },
-  mounted: function () {
+  beforeMount: function () {
     if (localStorage.getItem('colorscheme') === null)
       this.colorscheme = this.colorschemes[0];
     else
@@ -84,11 +84,13 @@ body {
 }
 
 .github-corner {
+  & .octo { fill: var(--aqua-color, #fff); }
+  & .octo-frame { fill: var(--background-alt, #000); }
+  ::selection {
+    background-color: var(--aqua-color);
+  }
   &:hover .octo-arm {
     animation:octocat-wave 560ms ease-in-out;
-  }
-  @media (max-width: 767px){
-    display: none
   }
   @keyframes octocat-wave{
     0%,100%{
@@ -101,12 +103,9 @@ body {
       transform:rotate(10deg)
     }
   }
-}
-.octo { fill: var(--aqua-color, #fff); }
-.octo-frame { fill: var(--background-alt, #000); }
-
-::selection {
-  background-color: var(--aqua-color);
+  @media (max-width: 767px){
+    display: none
+  }
 }
 
 h1 {

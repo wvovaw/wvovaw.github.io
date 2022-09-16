@@ -1,9 +1,8 @@
 <template>
-  <div id="projects">
-    <div id="flexbox">
-      <h1 id="projects">My projects</h1>
+    <div class="projects">
+      <h1 class="projects__header">My projects</h1>
       <ProjectEntity v-for="edge in $static.projects.edges" :key="edge.node.id"
-        class="entity"
+        class="project__entity"
         :title="edge.node.title"
         :description="edge.node.description"
         :techs="edge.node.techs"
@@ -11,7 +10,6 @@
         :link="edge.node.link"
       />
     </div>
-  </div>
 </template>
 
 <static-query>
@@ -49,15 +47,12 @@ h1 {
   color: var(--foreground);
   padding: 20px 0 20px;
 }
-#projects {
-  width: 100%;
-  background-color: var(--background-alt);
-}
-.entity {
+.project__entity {
   background-color: var(--background);
   margin-bottom: 8%;
 }
-#flexbox {
+.projects {
+  background-color: var(--background-alt);
   display: flex;
   flex-direction: column;
   justify-content: space-between;

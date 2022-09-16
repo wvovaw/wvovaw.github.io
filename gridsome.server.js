@@ -13,7 +13,7 @@ module.exports = function (api) {
     })
   // Add a node to this collection
     projects.addNode({
-      id: '6',
+      id: '7',
       title: 'LSApproximation',
       description: 'Least square approximation method app writen on C++ and Qt.\n(I made it as my coursework in the computational math class)',
       techs: [
@@ -26,21 +26,7 @@ module.exports = function (api) {
     })
 
     projects.addNode({
-      id: '5',
-      title: 'Balda, the game',
-      description: 'The Russian pen-and-paper word game where players should build as long words as possible.',
-      techs: [
-        { tech: 'Node.js', color: '#3C873A'},
-        { tech: 'Electron', color: '#303444'},
-        { tech: 'Express', color: '#f0ecec'},
-        { tech: 'Socket.io', color: '#1c1c1c'}
-      ],
-      image: 'balda.png',
-      link: 'https://github.com/wvovaw/Balda'
-    })
-
-    projects.addNode({
-      id: '4',
+      id: '6',
       title: 'Twitch bot',
       description: 'It does what it\'s told.',
       techs: [
@@ -52,20 +38,20 @@ module.exports = function (api) {
     })
 
     projects.addNode({
-      id: '3',
+      id: '5',
       title: 'Vuejs vocabulary app',
       description: 'Vocabulary training web app.\n1) Add word, translation, image;\n2) Train words in quiz;\n3) Memorize them!',
       techs: [
         { tech: 'Node.js', color: '#3C873A'},
         { tech: 'Vue', color: '#42b883'},
-        { tech: 'Materialize.css', color: '#f06c74'}
+        { tech: 'Vue-material', color: '#b3ff58'}
       ],
       image: 'vuevocab.png',
       link: 'https://github.com/wvovaw/Vue-Vocab'
     })
 
     projects.addNode({
-      id: '2',
+      id: '4',
       title: 'Clyrics',
       description: 'Search and read song lyrics from your terminal!',
       techs: [
@@ -77,7 +63,7 @@ module.exports = function (api) {
     })
 
     projects.addNode({
-      id: '1',
+      id: '3',
       title: 'Anonimalus',
       description: 'Discord.js bot for anonymous messaging. Invite it to your server to send anonymous messages to your friends.',
       techs: [
@@ -90,7 +76,7 @@ module.exports = function (api) {
     })
 
     projects.addNode({
-      id: '0',
+      id: '2',
       title: 'Gif Wallpaper',
       description: 'Set gif images as a wallpapers on OS Windows.\nIts backend is written on C and frontend on C++ with QT.',
       techs: [
@@ -98,8 +84,35 @@ module.exports = function (api) {
         { tech: 'C++17', color: '#6090bc'},
         { tech: 'qt', color: '#40c44c'},
       ],
-      image: 'gw.png',
+      image: 'gw.gif',
       link: 'https://github.com/wvovaw/gw-gui'
+    })
+
+    projects.addNode({
+      id: '1',
+      title: 'Todo app',
+      description: 'You create different pages and place notes with todo lists on them. It uses localStorage as store - no backend.',
+      techs: [
+        { tech: 'Vue', color: '#42b883'},
+        { tech: 'Bulma.css', color: '#00d1b2'},
+      ],
+      image: 'todo.png',
+      link: 'https://wvovaw.github.io/vue-todo/'
+    })
+
+    projects.addNode({
+      id: '0',
+      title: 'Balda, the game',
+      description: 'The Russian pen-and-paper word game where players should build as long words as possible.',
+      techs: [
+        { tech: 'Node.js', color: '#3C873A'},
+        { tech: 'Express', color: '#f0ecec'},
+        { tech: 'Socket.io', color: '#1c1c1c'},
+        { tech: 'Vue', color: '#42b883'},
+        { tech: 'Bulma.css', color: '#00d1b2'},
+      ],
+      image: 'balda.png',
+      link: 'https://github.com/balda-the-game'
     })
   })
 }

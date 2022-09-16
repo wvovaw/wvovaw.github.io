@@ -1,19 +1,22 @@
 <template>
-  <div id="grid">
-    <h1 id="title"><a :href="link">{{ title }}</a></h1>
-    <p id="description">
+  <div class="project">
+    <h1 class="project__title">
+      <a :href="link">{{ title }}</a>
+    </h1>
+    <p class="project__description">
       {{ description }}
     </p>
-    <div id="chips-bar">
+    <div class="project__chips chips">
       <div
-        id="chips"
+        class="chips__chip"
         v-for="_tech in techs"
         :key="_tech.tech + title"
         :style="'background-color:' + _tech.color"
-      >{{ _tech.tech }}
+      >
+        {{ _tech.tech }}
       </div>
     </div>
-    <div id="image">
+    <div class="project__image">
       <g-image :src="setImage" />
     </div>
   </div>
@@ -21,24 +24,19 @@
 
 <script>
 export default {
-  props: [
-    'title',
-    'description',
-    'techs',
-    'image',
-    'link'
-  ],
+  props: ["title", "description", "techs", "image", "link"],
   computed: {
-    setImage: function() {
+    setImage: function () {
       return require("~/assets/images/" + this.image);
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 a {
-  &, &:visited {
+  &,
+  &:visited {
     text-decoration: none;
     color: var(--green-color);
   }
@@ -47,46 +45,7 @@ a {
     cursor: pointer;
   }
 }
-#title {
-  grid-area: title;
-  padding: 5% 0 0 5%;
-  font-family: Roboto Slab;
-}
-#description {
-  grid-area: description;
-  padding: 5% 5%;
-  margin-top: 5%;
-  font-family: Poppins;
-  color: var(--foreground-alt);
-}
-#chips-bar {
-  grid-area: chips;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-content: center;
-  padding-left: 5%;
-
-  #chips {
-    align-self: flex-start;
-    background-color: grey;
-    border-radius: 20px;
-    height: max-content;
-    padding: 0 5%;
-    margin: 1em 1em 0 0;
-  }
-}
-#image {
-  grid-area: image;
-  max-width: 350px;
-  max-height: 350px;
-  padding: 5%;
-  img {
-    width: 100%;
-    float: rihgt;
-  }
-}
-#grid {
+.project {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -95,11 +54,52 @@ a {
   &:hover {
     border-color: var(--purple-color);
   }
+
+  .project__title {
+    grid-area: title;
+    padding: 5% 0 0 5%;
+    font-family: Roboto Slab;
+  }
+  .project__description {
+    grid-area: description;
+    padding: 5% 5%;
+    margin-top: 5%;
+    font-family: Poppins;
+    color: var(--foreground-alt);
+  }
+  .project__chips {
+    grid-area: chips;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    font-size: 0.8em;
+    padding-left: 5%;
+
+    .chips__chip {
+      align-self: flex-start;
+      background-color: grey;
+      border-radius: 20px;
+      height: max-content;
+      padding: 0 3%;
+      margin: 1em 1em 0 0;
+    }
+  }
+  .project__image {
+    grid-area: image;
+    max-width: 350px;
+    max-height: 350px;
+    padding: 5%;
+    img {
+      width: 100%;
+      float: rihgt;
+    }
+  }
 }
 @media screen and (min-width: 1024px) {
-  #grid {
+  .project {
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
       "title image"
       "description image"
       "chips image";
@@ -110,17 +110,20 @@ a {
       margin-bottom: 0;
     }
   }
-  #image {
+  .project__image {
+    display: flex;
+    align-items: center;
     margin-left: auto;
+    justify-content: center;
   }
 }
 @media screen and (max-width: 600px) {
-  #image {
+  .project__image {
     align-self: center;
   }
-  #grid {
+  .project {
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
       "title"
       "description"
       "chips"
