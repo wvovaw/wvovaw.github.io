@@ -53,8 +53,8 @@ export default {
       document.getElementById('app').className = this.colorscheme;
     }
   },
-  beforeMount: function () {
-    if (localStorage.getItem('colorscheme') === null)
+  beforeMount() {
+    if (!localStorage.hasOwnProperty('colorscheme'))
       this.colorscheme = this.colorschemes[0];
     else
     {
@@ -67,7 +67,6 @@ export default {
       }
     }
     localStorage.setItem('colorscheme', this.colorscheme);
-    document.getElementById('app').className = this.colorscheme;
   }
 }
 </script>
@@ -75,12 +74,16 @@ export default {
 <style lang="scss">
 html { height: 100%; }
 body {
-  font-family: Poppins;
+  height: 100%;
   margin:0;
   padding:0;
   line-height: 1.5;
-  height: 100%;
-  background-color: var(--background-alt);
+  font-family: Poppins;
+  overflow-y: visible;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .github-corner {
@@ -92,26 +95,16 @@ body {
   &:hover .octo-arm {
     animation:octocat-wave 560ms ease-in-out;
   }
-  @keyframes octocat-wave{
-    0%,100%{
-      transform:rotate(0)
-    }
-    20%,60%{
-      transform:rotate(-25deg)
-    }
-    40%,80%{
-      transform:rotate(10deg)
-    }
-  }
-  @media (max-width: 767px){
-    display: none
+  @keyframes octocat-wave {
+    0%, 100% { rotate: 0; }
+    20%, 60% { rotate: -25deg; }
+    40%, 80% { rotate: 10deg; }
   }
 }
 
-h1 {
-  margin: 0;
-  @media (max-width: 320px) {
-    font-size: 1.5em;
+@media (max-width: 767px){
+  .github-corner {
+    display: none
   }
 }
 </style>

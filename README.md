@@ -63,6 +63,7 @@ module.exports = function (api) {
   }
 }
 ```
+
 Run 
 
 > It will rebuild the server and you will be able to perform queries

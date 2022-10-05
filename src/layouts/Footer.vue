@@ -6,14 +6,12 @@
 
 <style lang="scss" scoped>
 footer {
-  font-family: Roboto Slab;
+  width: 100%;
+  height: 2rem;
+  line-height: 2rem;
   text-align: center;
-
   color: #42b883;
   background-color: #35495e;
-
-  width: 100%;
-  height: 30px;
-  line-height: 30px;
+  font-family: Roboto Slab;
 }
 </style>

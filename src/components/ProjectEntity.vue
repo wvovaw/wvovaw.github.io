@@ -1,25 +1,21 @@
 <template>
-  <div class="project">
+  <article class="project">
     <h1 class="project__title">
-      <a :href="link">{{ title }}</a>
+      <a :href="link" class="project__link">{{ title }}</a>
     </h1>
     <p class="project__description">
       {{ description }}
     </p>
     <div class="project__chips chips">
-      <div
-        class="chips__chip"
-        v-for="_tech in techs"
-        :key="_tech.tech + title"
-        :style="'background-color:' + _tech.color"
-      >
+      <div class="chips__chip" v-for="_tech in techs" :key="_tech.tech + title"
+        :style="'background-color:' + _tech.color">
         {{ _tech.tech }}
       </div>
     </div>
     <div class="project__image">
       <g-image :src="setImage" />
     </div>
-  </div>
+  </article>
 </template>
 
 <script>
@@ -34,68 +30,75 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-a {
-  &,
-  &:visited {
-    text-decoration: none;
-    color: var(--green-color);
-  }
-  &:hover {
-    text-decoration: underline;
-    cursor: pointer;
-  }
-}
 .project {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  padding: 2% 5%;
   border: 5px solid var(--aqua-color);
-  border-radius: 3px;
+  border-radius: 6px;
+
   &:hover {
     border-color: var(--purple-color);
   }
 
-  .project__title {
-    grid-area: title;
-    padding: 5% 0 0 5%;
-    font-family: Roboto Slab;
+  &__link {
+
+    &,
+    &:visited {
+      text-decoration: none;
+      color: var(--green-color);
+    }
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
   }
-  .project__description {
+
+  &__title {
+    margin-block-end: 0;
+    grid-area: title;
+    font-family: Roboto Slab;
+    font-size: 1.4rem;
+  }
+
+  &__description {
     grid-area: description;
-    padding: 5% 5%;
-    margin-top: 5%;
     font-family: Poppins;
     color: var(--foreground-alt);
   }
-  .project__chips {
+
+  .chips {
     grid-area: chips;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-content: center;
-    font-size: 0.8em;
-    padding-left: 5%;
+    font-size: 0.8rem;
 
-    .chips__chip {
-      align-self: flex-start;
-      background-color: grey;
-      border-radius: 20px;
+    &__chip {
       height: max-content;
       padding: 0 3%;
-      margin: 1em 1em 0 0;
+      margin: 0 1em 1em 0;
+      border-radius: 20px;
+      background-color: grey;
     }
   }
-  .project__image {
+
+  &__image {
     grid-area: image;
     max-width: 350px;
     max-height: 350px;
-    padding: 5%;
+    align-self: center;
+
     img {
       width: 100%;
       float: rihgt;
     }
   }
 }
+
 @media screen and (min-width: 1024px) {
   .project {
     display: grid;
@@ -103,35 +106,33 @@ a {
       "title image"
       "description image"
       "chips image";
-    grid-template-rows: 6em auto 6em;
-    grid-template-columns: 30em 1fr;
+    grid-template-columns: 1fr auto;
 
-    :last-child {
-      margin-bottom: 0;
+    &__description {
+      margin-inline-end: 1rem;
     }
   }
-  .project__image {
+
+  &__image {
     display: flex;
     align-items: center;
-    margin-left: auto;
     justify-content: center;
   }
 }
-@media screen and (max-width: 600px) {
-  .project__image {
-    align-self: center;
-  }
+
+@media screen and (max-width: 768px) {
   .project {
     display: grid;
+    padding: 5%;
     grid-template-areas:
       "title"
       "description"
       "chips"
       "image";
-    grid-template-rows: 6em auto 5em auto;
+    grid-template-rows: auto auto auto auto;
 
-    :last-child {
-      margin-bottom: 0;
+    &__image {
+      align-self: center;
     }
   }
 }
