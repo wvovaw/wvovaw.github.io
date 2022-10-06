@@ -11,15 +11,20 @@
   </section>
 </template>
 
+<script>
+</script>
+
 <style lang="scss" scoped>
 .title {
   display: flex;
   align-items: center;
   width: 100%;
   height: 85vh;
-  background-color: var(--background);
+  // background-color: var(--background);
+  background-color: transparent;
   color: var(--foreground);
   font-size: 1.6rem;
+
 
   h1,
   h2 {
