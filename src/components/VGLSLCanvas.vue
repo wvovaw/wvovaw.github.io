@@ -4,7 +4,8 @@
 
 <script>
 // https://www.npmjs.com/package/glsl-canvas-js
-import { Canvas } from 'glsl-canvas-js'
+// FIXME: It won't build as dependency but works well as minified script
+import { Canvas } from '../plugins/glsl-canvas.min.js'
 
 const options = {
   alpha: true,
@@ -22,7 +23,6 @@ const options = {
     console.log(error);
   }
 };
-
 
 export default {
   name: 'VGLSLCanvas',
