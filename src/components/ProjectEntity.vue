@@ -7,9 +7,13 @@
       {{ description }}
     </p>
     <div class="project__chips chips">
-      <div class="chips__chip" v-for="_tech in techs" :key="_tech.tech + title"
-        :style="'background-color:' + _tech.color">
-        {{ _tech.tech }}
+      <div
+        class="chips__chip"
+        v-for="_tech in techs"
+        :key="_tech.tech + title"
+        :style="'background-color:' + _tech.color"
+      >
+        <component :is="_tech.icon" class="chips__icon" /> {{ _tech.tech }}
       </div>
     </div>
     <div class="project__image">
@@ -22,7 +26,7 @@
 export default {
   props: ["title", "description", "techs", "image", "link"],
   computed: {
-    setImage: function () {
+    setImage: function() {
       return require("~/assets/images/" + this.image);
     },
   },
@@ -43,7 +47,6 @@ export default {
   }
 
   &__link {
-
     &,
     &:visited {
       text-decoration: none;
@@ -78,11 +81,15 @@ export default {
     font-size: 0.8rem;
 
     &__chip {
+      display: flex;
+      column-gap: 0.3rem;
+      align-items: center;
       height: max-content;
       padding: 0 3%;
       margin: 0 1em 1em 0;
       border-radius: 20px;
-      background-color: grey;
+      background-color: gray;
+      color: rgb(15, 15, 15);
     }
   }
 

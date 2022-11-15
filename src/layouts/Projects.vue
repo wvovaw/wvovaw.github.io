@@ -1,9 +1,16 @@
 <template>
   <section class="projects" id="projects">
     <h1 class="projects__header">My projects</h1>
-    <ProjectEntity v-for="edge in $static.projects.edges" :key="edge.node.id" class="projects__entity"
-      :title="edge.node.title" :description="edge.node.description" :techs="edge.node.techs" :image="edge.node.image"
-      :link="edge.node.link" />
+    <ProjectEntity
+      v-for="edge in $static.projects.edges"
+      :key="edge.node.id"
+      class="projects__entity"
+      :title="edge.node.title"
+      :description="edge.node.description"
+      :techs="edge.node.techs"
+      :image="edge.node.image"
+      :link="edge.node.link"
+    />
   </section>
 </template>
 
@@ -18,6 +25,7 @@ query {
         techs {
           tech
           color
+          icon
         }
         image
         link
@@ -28,12 +36,12 @@ query {
 </static-query>
 
 <script>
-import ProjectEntity from '../components/ProjectEntity'
+import ProjectEntity from "../components/ProjectEntity";
 export default {
   components: {
-    ProjectEntity
-  }
-}
+    ProjectEntity,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
