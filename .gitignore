@@ -1,9 +1,11 @@
-*.log
-.cache
-.DS_Store
-src/.temp
 node_modules
+*.log*
+.nuxt
+.nitro
+.cache
+.output
 .env
-.env.*
-vetur.config.js
 dist
+localhost-key.pem
+localhost.pem
+certificates/
