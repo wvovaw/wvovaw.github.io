@@ -1,5 +1,8 @@
 <script setup>
 const props = defineProps({ blok: Object });
+const anchor = computed(() =>
+  props.blok.anchor ? props.blok.anchor.url : ""
+);
 </script>
 
 <template>
@@ -7,7 +10,7 @@ const props = defineProps({ blok: Object });
     v-editable="blok"
     class="relative mb-20 mt-10 w-full text-center"
     :class="blok.align"
-    :id="blok.anchor.url"
+    :id="anchor"
   >
     <h1
       class="absolute inset-0 text-5xl md:text-7xl font-semibold leading-tight tracking-widest text-gray-100 opacity-30"
