@@ -9,6 +9,8 @@ module.exports = {
     fontFamily: {
       // sans: "Roboto, sans-serif",
       sans: ["'Josefin Sans'", "sans-serif"],
+      josefin: ["'Josefin Sans'", "sans-serif"],
+      roboto: "Roboto",
     },
   },
   safelist: [

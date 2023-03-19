@@ -1,8 +1,9 @@
 <script setup>
 import { onMounted, watch } from "vue";
-
 const props = defineProps({ blok: Object });
-// const level = ref(0);
+const level = ref(0);
+
+// TODO: Animate from 0 to blok.level
 // let interval = null;
 // onMounted(() => {
 //   interval = setInterval(() => (level.value += 1), 100);
@@ -26,7 +27,7 @@ const props = defineProps({ blok: Object });
       <sub class="font-light italic"> {{ blok.level }} % </sub>
       <div class="h-2 w-full rounded-full bg-gray-300">
         <div
-          class="h-2 rounded-full bg-green-500 p-0.5"
+          class="h-2 rounded-full bg-green-500 py-0.5"
           :style="'width: ' + blok.level + '%'"
         ></div>
       </div>

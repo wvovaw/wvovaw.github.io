@@ -41,7 +41,7 @@ let glsl = ref(null);
       :options="options"
       ref="canvas"
     />
-    <div class="mx-5 max-w-5xl text-neutral-200 lg:mx-auto">
+    <div class="mx-5 max-w-5xl text-neutral-200">
       <p
         class="mb-12 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl"
       >

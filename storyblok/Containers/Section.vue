@@ -8,7 +8,7 @@ color.value = data.story.content[props.blok.color].color;
 <template>
   <div
     v-editable="blok"
-    class="grid w-full place-items-center"
+    class="grid w-full place-items-center pt-16 px-4"
     :class="[blok.height]"
     :style="{ 'background-color': color }"
   >
