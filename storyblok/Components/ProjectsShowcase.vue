@@ -4,7 +4,7 @@ defineProps({ blok: Object });
 <template>
   <div
     v-editable="blok"
-    class="container mx-auto my-12 flex flex-col justify-between gap-12"
+    class="container max-w-[1200px] mx-auto my-12 flex flex-col justify-between gap-12"
   >
     <StoryblokComponent
       v-for="blok in blok.projects"

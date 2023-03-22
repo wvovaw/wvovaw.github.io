@@ -4,6 +4,7 @@
   <div>
     <Navbar class="absolute w-full" />
     <slot />
+    <Footer />
   </div>
 </template>
 
