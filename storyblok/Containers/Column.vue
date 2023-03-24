@@ -5,7 +5,7 @@ const props = defineProps({ blok: Object });
 <template>
   <div
     v-editable="blok"
-    class="h-fit w-full"
+    class="h-fit w-full grid place-content-center"
   >
     <StoryblokComponent
       v-for="blok in blok.content"

@@ -3,7 +3,7 @@ defineProps({ blok: Object });
 useHead({
   script: [
     {
-      src: "https://unpkg.com/glsl-canvas-js/dist/umd/glsl-canvas.min.js",
+      src: "./scripts/glsl-canvas.min.js",
     },
   ],
 });
