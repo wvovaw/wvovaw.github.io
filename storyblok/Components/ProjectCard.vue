@@ -13,7 +13,7 @@ const props = defineProps({ blok: Object });
         :alt="blok.image.alt"
       />
       <div
-        class="flex flex-col justify-start p-6 lg:rounded-r-lg lg:shadow-lg lg:dark:bg-neutral-700"
+        class="bg flex flex-col justify-start p-6 lg:rounded-r-lg lg:shadow-lg lg:dark:bg-neutral-700"
       >
         <h5
           class="my-4 text-2xl font-extrabold italic text-neutral-800 dark:text-neutral-50"
@@ -37,3 +37,17 @@ const props = defineProps({ blok: Object });
     </div>
   </div>
 </template>
+
+<style scoped>
+.bg {
+  z-index: 20;
+  --s: 35px; /* control the size */
+  --color: #323232;
+  --darker: color-mix(in srgb, var(--color) 98%, #fff);
+
+  background: linear-gradient(135deg, #0000 18.75%, var(--color) 0 31.25%, #0000 0),
+    repeating-linear-gradient(45deg, var(--color) -6.25% 6.25%, var(--darker) 0 18.75%);
+  background-size: var(--s) var(--s);
+  border-radius: 5px;
+}
+</style>
