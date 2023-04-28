@@ -21,8 +21,8 @@ module.exports = {
     utils: true,
     logs: true,
     prefix: "",
-    darkTheme: "dark",
-    lightTheme: "light",
+    darkTheme: "business",
+    lightTheme: "corporate",
     themes: [
       "light",
       "dark", // Nice dark theme
