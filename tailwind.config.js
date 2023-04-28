@@ -13,60 +13,46 @@ module.exports = {
       roboto: "Roboto",
     },
   },
-  safelist: [
-    // blends
-    "mix-blend-normal",
-    "mix-blend-multiply",
-    "mix-blend-screen",
-    "mix-blend-overlay",
-    "mix-blend-darken",
-    "mix-blend-lighten",
-    "mix-blend-color-dodge",
-    "mix-blend-color-burn",
-    "mix-blend-hard-light",
-    "mix-blend-soft-light",
-    "mix-blend-difference",
-    "mix-blend-exclusion",
-    "mix-blend-hue",
-    "mix-blend-saturation",
-    "mix-blend-color",
-    "mix-blend-luminosity",
-    "mix-blend-plus-lighter",
-    // Heights
-    "h-full",
-    "h-fit",
-    "h-screen",
-    "h-auto",
-    // Width
-    "w-full",
-    "w-fit",
-    "w-screen",
-    "w-aeuto",
-    // Place content
-    "place-content-start",
-    "place-content-center",
-    "place-content-end",
-    // Place items
-    "place-items-start",
-    "place-items-center",
-    "place-items-end",
-    // Text align
-    "text-start",
-    "text-center",
-    "text-end",
-    // Text sizes
-    "text-5xl",
-    "text-4xl",
-    "text-3xl",
-    "text-2xl",
-    "text-xl",
-    "text-lg",
-    // Font weigh
-    "font-thin",
-    "font-normal",
-    "font-medium",
-    "font-bold",
-    "font-extrabold",
-  ],
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [require("@tailwindcss/typography"), require("daisyui")],
+  daisyui: {
+    styled: true,
+    themes: true,
+    base: true,
+    utils: true,
+    logs: true,
+    prefix: "",
+    darkTheme: "dark",
+    lightTheme: "light",
+    themes: [
+      "light",
+      "dark", // Nice dark theme
+      "cupcake",
+      "bumblebee",
+      "emerald",
+      "corporate", // Nice light theme
+      "synthwave",
+      "retro",
+      "cyberpunk",
+      "valentine",
+      "halloween",
+      "garden",
+      "forest",
+      "aqua", // Nice blueprint
+      "lofi", // Nice minimal b&w
+      "pastel", // girls gonna like this theme
+      "fantasy",
+      "wireframe", // Nice minimal light theme witch comic sans font
+      "black", // True black theme
+      "luxury",
+      "dracula", // Nice dark theme
+      "cmyk",
+      "autumn",
+      "business", // Nice strict black theme (opposite to corporate)
+      "acid",
+      "lemonade",
+      "night",
+      "coffee",
+      "winter",
+    ],
+  },
 };

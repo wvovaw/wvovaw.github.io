@@ -32,7 +32,7 @@ let glsl = ref(null);
 <template>
   <div
     v-editable="blok"
-    class="grid"
+    class="grid w-full h-screen"
     :class="[blok.height, blok.content_position]"
   >
     <canvas
@@ -41,7 +41,7 @@ let glsl = ref(null);
       :options="options"
       ref="canvas"
     />
-    <div class="mx-5 max-w-5xl text-neutral-200">
+    <div class="mx-5 max-w-5xl text-neutral-content">
       <p
         class="mb-12 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl"
       >

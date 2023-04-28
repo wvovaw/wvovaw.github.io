@@ -10,8 +10,8 @@ const props = defineProps({ blok: Object });
     :target="blok.link.target"
     class="flex flex-col justify-center text-center"
   >
-    <i class="m-2 mb-0 flex justify-center backdrop-filter saturate-0 hover:saturate-100 transition duration-150 ease-in" v-html="blok.svg" />
-    <label v-if="blok.label" class="text-gray-300 font-roboto font-bold my-3">
+    <i class="m-2 mb-5 w-12 h-12 sm:mb-0 sm:w-20 sm:h-20 flex justify-center backdrop-filter saturate-0 hover:saturate-100 transition duration-150 ease-in" v-html="blok.svg" />
+    <label v-if="blok.label" class="font-roboto font-bold my-3">
       {{ blok.label }}
     </label>
   </a>

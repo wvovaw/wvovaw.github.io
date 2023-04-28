@@ -8,7 +8,7 @@ const anchor = computed(() =>
 <template>
   <div v-editable="blok" class="w-full" :id="anchor">
     <h1
-      class="leading-tight text-gray-100"
+      class="leading-tight text-base-content"
       :class="[blok.size, blok.align, blok.weight, blok.color]"
     >
       {{ blok.text }}
