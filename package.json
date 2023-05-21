@@ -1,23 +1,24 @@
 {
+  "name": "nuxt-app",
   "private": true,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "proxy": "local-ssl-proxy --source 3010 --target 3000 --cert ./certificates/localhost.pem --key ./certificates/localhost-key.pem",
     "dev:https": "nuxt dev --https",
+    "postinstall": "nuxt prepare",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.2.0",
-    "@storyblok/nuxt": "^5.0.2",
+    "@nuxtjs/tailwindcss": "^6.7.0",
+    "@storyblok/nuxt": "^5.4.5",
     "@tailwindcss/typography": "^0.5.9",
-    "daisyui": "^2.51.5",
-    "gh-pages": "^5.0.0",
-    "glsl-canvas-js": "^0.2.9",
-    "nuxt": "^3.0.0",
-    "prettier": "^2.8.3",
-    "prettier-plugin-tailwindcss": "^0.2.2"
-  },
-  "dependencies": {}
+    "@types/node": "^18",
+    "daisyui": "^2.51.6",
+    "nuxt": "^3.5.0",
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.3.0"
+  }
 }

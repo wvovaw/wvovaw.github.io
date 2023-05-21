@@ -12,7 +12,8 @@ export default defineNuxtConfig({
     ],
     "@nuxtjs/tailwindcss",
   ],
-  router: {
-    baseURL: "/",
+  components: {
+    global: true,
+    dirs: ["~/components"]
   },
 });
