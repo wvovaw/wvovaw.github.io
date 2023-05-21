@@ -1,10 +1,11 @@
-<script setup>
+<script setup lang="ts">
+import { StoryblokStory } from './types';
 const storyblokApi = useStoryblokApi();
 const { data } = await storyblokApi.get("cdn/stories/config", {
   version: "published",
   resolve_links: "url",
 });
-await useState("siteConfig", () => data);
+useState<StoryblokStory>("siteConfig", () => data.story);
 </script>
 
 <template>

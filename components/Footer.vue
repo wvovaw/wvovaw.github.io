@@ -1,9 +1,4 @@
-<script setup>
-const data = toRaw(unref(await useState("siteConfig")));
-const contacts_links = ref(null);
-
-contacts_links.value = data.story.content.contacts_links;
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <footer
