@@ -8,7 +8,7 @@ const props = defineProps({ blok: Object });
       class="flex flex-col rounded-lg border border-base-content bg-neutral shadow-lg lg:flex-row"
     >
       <img
-        class=" w-full rounded-t-lg object-contain lg:h-auto lg:max-w-lg lg:rounded-none lg:rounded-l-lg"
+        class="w-full rounded-t-lg object-fill lg:h-auto lg:max-w-lg lg:rounded-none lg:rounded-l-lg"
         :src="blok.image.filename"
         :alt="blok.image.alt"
       />
@@ -16,23 +16,30 @@ const props = defineProps({ blok: Object });
         class="bg flex flex-col justify-start p-6 lg:rounded-r-lg lg:shadow-lg"
       >
         <h5
-          class="my-4 text-2xl font-extrabold italic"
+          class="my-3 text-2xl font-extrabold italic"
         >
           {{ blok.title }}
         </h5>
         <p
-          class="mb-4 text-lg font-normal"
+          class="mb-3 text-xl font-normal"
         >
           {{ blok.description }}
         </p>
         <!-- TODO: add chips StoryblokComponent section to display used techs chips -->
-        <p class="mt-auto flex flex-row flex-wrap gap-3">
+        <div class="my-3 flex flex-row flex-wrap gap-4">
+          <StoryblokComponent
+            v-for="blok in blok.techs"
+            :key="blok._uid"
+            :blok="blok"
+          />
+        </div>
+        <div class="mt-auto flex flex-row flex-wrap gap-3">
           <StoryblokComponent
             v-for="blok in blok.links"
             :key="blok._uid"
             :blok="blok"
           />
-        </p>
+        </div>
       </div>
     </div>
   </div>
