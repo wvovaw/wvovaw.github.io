@@ -14,6 +14,9 @@ export default defineNuxtConfig({
   ],
   components: {
     global: true,
-    dirs: ["~/components"]
+    dirs: ["~/components"],
   },
+  app: {
+    baseURL: "/"
+  }
 });
