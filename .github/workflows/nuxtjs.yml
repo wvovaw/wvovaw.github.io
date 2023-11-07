@@ -11,7 +11,12 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
+  
+  # Allows you to run this workflow from a webhook
+  repository_dispatch:
+    types:
+      - webhook
+      
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
