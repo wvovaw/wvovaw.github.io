@@ -1,5 +1,3 @@
-<script setup lang="ts"></script>
-
 <template>
   <footer
     class="footer footer-center items-center bg-neutral p-4 text-neutral-content"

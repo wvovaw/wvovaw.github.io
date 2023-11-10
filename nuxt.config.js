@@ -1,22 +1,15 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   css: ["@/assets/css/roboto.css", "@/assets/css/josefin.css"],
-  modules: [
-    [
-      "@storyblok/nuxt",
-      {
-        accessToken: "uqbMRn9enHzcZPsUC9zU0gtt",
-        // apiOptions: {
-        //   region: "us" // When creating your space in US region (EU default)
-        // }
-      },
-    ],
-    "@nuxtjs/tailwindcss",
-  ],
+  devtools: { enabled: true },
+  modules: ["@nuxtjs/tailwindcss", "nuxt-icon", "@nuxt/image"],
   components: {
-    global: true,
-    dirs: ["~/components"],
+    dirs: [],
   },
   app: {
-    baseURL: "/"
-  }
+    baseURL: "/",
+  },
+  routeRules: {
+    "/blog": {prerender: false}
+  },
 });

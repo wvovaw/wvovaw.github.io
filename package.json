@@ -1,24 +1,38 @@
 {
   "name": "nuxt-app",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "proxy": "local-ssl-proxy --source 3010 --target 3000 --cert ./certificates/localhost.pem --key ./certificates/localhost-key.pem",
-    "dev:https": "nuxt dev --https",
-    "postinstall": "nuxt prepare",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "deploy": "gh-pages -d dist"
+    "postinstall": "nuxt prepare",
+    "_lint": "eslint --ext '.ts,.js,.vue' --ignore-path .gitignore .",
+    "_format": "prettier --check .",
+    "lint": "bun _lint && bun _format",
+    "lint:fix": "prettier --write --list-different . && bun _lint --fix"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.7.0",
-    "@storyblok/nuxt": "^5.4.5",
-    "@tailwindcss/typography": "^0.5.9",
-    "@types/node": "^18",
-    "daisyui": "^2.51.6",
-    "nuxt": "^3.5.0",
-    "prettier": "^2.8.8",
-    "prettier-plugin-tailwindcss": "^0.3.0"
+    "@nuxt/devtools": "latest",
+    "@nuxt/image": "latest",
+    "@nuxtjs/tailwindcss": "^6.9.4",
+    "@tailwindcss/typography": "^0.5.10",
+    "@types/node": "^20.9.0",
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-vue": "^9.18.1",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
+    "prettier": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.6",
+    "typescript": "^5.2.2",
+    "daisyui": "^3.9.4",
+    "nuxt": "^3.8.1",
+    "nuxt-icon": "^0.6.5",
+    "vue": "^3.3.8",
+    "vue-router": "^4.2.5"
   }
 }
