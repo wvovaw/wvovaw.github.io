@@ -14,43 +14,80 @@ blocks:
       - key: Age
         value: "24"
       - key: Experience
-        value: 3 years
+        value: 4 years
     -
       - key: Language
         value: Russian, English
       - key: Email
         value: wvovaw0@gmail.com
-      - key: Discord
-        value: wvovaw
+      - key: Telegram
+        value: "@gerserk"
   techs:
     - title: Javascript
       color: warning
       icon: mdi:language-javascript
+
     - title: Typescript
       color: info
       icon: mdi:language-typescript
+
     - title: CSS
       color: primary
       icon: simple-icons:css3
+
+    - title: SCSS
+      color: error
+      icon: simple-icons:sass
+
     - title: Vue
       color: success
       icon: mdi:vuejs
+
     - title: Tailwindcss
       color: info
       icon: simple-icons:tailwindcss
+
     - title: Nuxt
       color: success
       icon: simple-icons:nuxtdotjs
+
     - title: Astro
       color: neutral
       icon: simple-icons:astro
+
     - title: Strapi
       color: primary
       icon: simple-icons:strapi
+
     - title: Deno
       color: neutral
       icon: simple-icons:deno
+
   projects:
+    - title: "@links/ui"
+      description:
+        UI library built on top of radix-vue with unocss. This library is a part of the @links/web project which is work-in-progress.
+      techs:
+        - title: Vue
+          color: success
+          icon: mdi:vuejs
+        - title: Unocss
+          color: neutral
+          icon: simple-icons:unocss
+      links:
+        - title: Check this out
+          target: _blank
+          icon: ph:cursor-click-light
+          color: accent
+          url: https://wvovaw.github.io/links/docs/
+        - title: Code
+          target: _blank
+          icon: simple-icons:git
+          url: https://github.com/wvovaw/links/tree/master/packages/ui
+      image:
+        src: images/links-ui.png
+        alt: "@links/ui docs page screenshot"
+
     - title: The Button
       description:
         A simple clicker game with one rule - one click increases the counter
@@ -68,6 +105,7 @@ blocks:
         - title: Prisma
           color: neutral
           icon: simple-icons:prisma
+
       links:
         - title: Play it!
           target: _blank
@@ -85,6 +123,7 @@ blocks:
       image:
         src: images/thebutton.png
         alt: The button game screenshot
+
     - title: Wasd Market
       description:
         Online marketplace of video games and other digital products. Featured
@@ -109,10 +148,11 @@ blocks:
       image:
         src: images/wasdmarket.png
         alt: wasdmarket screenshot
+
     - title: Blog
       description:
         Astro powered blog. Simple static blog website built on the Astro
-        content API. Leverages the latest features of Astro, including Viewport Transitoins
+        content API. Leverages the latest features of Astro, including View Transitoins
       techs:
         - title: Astro
           color: neutral
@@ -133,6 +173,7 @@ blocks:
       image:
         src: images/blog.png
         alt: blog screenshot
+
     - title: Mars Gallery
       description:
         All NASA Mars rover photos in one place. It exposes the official
@@ -149,6 +190,7 @@ blocks:
         - title: Deno
           color: neutral
           icon: simple-icons:deno
+
       links:
         - title: Have a look
           target: _blank
@@ -162,21 +204,25 @@ blocks:
       image:
         src: images/mars-gallery.png
         alt: Mars gallery screenshot
+
   contacts:
     - title: Discord
       icon: simple-icons:discord
       url: https://discordapp.com/users/287283242854383618
       target: _blank
       color: "#7289DA"
+
     - title: Telegram
       icon: simple-icons:telegram
       url: https://t.me/@gerserk
       target: _blank
       color: "#229ED9"
+
     - title: Email
       icon: ic:round-alternate-email
       url: mailto:wvovaw0@gmail.com
       color: "#c71610"
+
     - title: Github
       icon: simple-icons:github
       url: https://github.com/wvovaw
