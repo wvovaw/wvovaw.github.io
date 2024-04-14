@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { type UIColors } from "@/types";
+import type { UIColors } from "@/types";
 
 interface DoubleHeaderProps {
   text1: string;

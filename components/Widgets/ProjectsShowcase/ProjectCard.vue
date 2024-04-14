@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import TechChip from "./TechChip.vue";
 import { WButton } from "@/components/UI";
-import { type Project } from "@/types";
+import type { Project } from "@/types";
 
 interface ProjectCardProps {
   project: Project;
@@ -18,7 +18,7 @@ defineProps<ProjectCardProps>();
         class="w-full rounded-t-lg object-fill lg:h-auto lg:max-w-lg lg:rounded-none lg:rounded-l-lg"
         :src="project.image.src"
         :alt="project.image.alt"
-      />
+      >
       <div
         class="bg flex flex-col justify-start p-6 lg:rounded-r-lg lg:shadow-lg"
       >

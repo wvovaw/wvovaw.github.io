@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import TechCard from "./TechCard.vue";
-import { type Tech } from "@/types";
+import type { Tech } from "@/types";
 
 interface TechStackProps {
   techs: Tech[];

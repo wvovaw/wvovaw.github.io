@@ -1,15 +1,15 @@
-sitename: "wvovaw"
+sitename: wvovaw
 navigation:
   links:
-  - id: 0
-    title: "About me"
-    url: "#about"
-  - id: 1
-    title: "Projects"
-    url: "#projects"
-  - id: 2
-    title: "Blog"
-    url: "https://wvovaw.github.io/blog"
-    target: "_blank"
+    - id: 0
+      title: About me
+      url: "#about"
+    - id: 1
+      title: Projects
+      url: "#projects"
+    - id: 2
+      title: Blog
+      url: "https://wvovaw.github.io/blog"
+      target: _blank
 footer:
-  text: "2022 - 2024"
+  text: 2022 - 2024

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { type UIColors } from "@/types";
+import type { UIColors } from "@/types";
 
 interface PageSectionProps {
   color: UIColors | "base1" | "base2" | "base3";

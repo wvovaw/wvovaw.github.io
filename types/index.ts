@@ -1,4 +1,4 @@
-import { type UIColors } from "./ui";
+import type { UIColors } from "./ui";
 
 export interface Link {
   url: string;
@@ -14,8 +14,8 @@ interface IColorizable<C> {
   color?: C;
 }
 
-export interface ButtonLink extends IColorizable<UIColors>, IconLink { }
-export interface HEXColorLink extends IColorizable<`#${string}`>, IconLink { }
+export interface ButtonLink extends IColorizable<UIColors>, IconLink {}
+export interface HEXColorLink extends IColorizable<`#${string}`>, IconLink {}
 
 export interface Image {
   src: string;
@@ -24,18 +24,18 @@ export interface Image {
   height?: number;
 }
 
-export type Tech = {
+export interface Tech {
   icon: string;
   title: string;
   color: UIColors | "base1" | "base2" | "base3";
-};
+}
 
-export type Project = {
+export interface Project {
   title: string;
   description: string;
   techs: Tech[];
   image: Image;
   links: ButtonLink[];
-};
+}
 
 export * from "./ui";

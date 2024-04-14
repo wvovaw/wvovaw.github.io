@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { type Tech } from "@/types";
+import type { Tech } from "@/types";
 
 interface TechChipProps {
   tech: Tech;

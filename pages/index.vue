@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { PageSection, WNavbar, WFooter, DoubleHeader, WHeader } from "@/components/UI"
-import { TechStack, Contacts, KeyValueTable, ProjectsShowcase, HeroGLSL } from "@/components/Widgets";
+import { DoubleHeader, PageSection, WFooter, WHeader, WNavbar } from "@/components/UI";
+import { Contacts, HeroGLSL, KeyValueTable, ProjectsShowcase, TechStack } from "@/components/Widgets";
 import { Grid1x2, GridColumn } from "@/components/Grids";
 
-const siteConfigData = await useAsyncData("site-config", () => queryContent('/site-config').findOne());
+const siteConfigData = await useAsyncData("site-config", () => queryContent("/site-config").findOne());
 const { sitename, navigation, footer } = siteConfigData.data.value!;
 
-const homepageData = await useAsyncData("homepage", () => queryContent('/homepage').findOne());
+const homepageData = await useAsyncData("homepage", () => queryContent("/homepage").findOne());
 const { headline, subheadline, shaderPath } = homepageData.data.value?.blocks.hero;
 const { personal, techs, projects, contacts } = homepageData.data.value?.blocks;
 
@@ -22,7 +22,7 @@ onMounted(() => {
     enter-active-class="transition duration-300 ease-out"
   >
     <WNavbar
-      v-if="showNav" 
+      v-if="showNav"
       class="absolute w-full"
       :links="navigation.links"
       :sitename="sitename"
@@ -43,11 +43,15 @@ onMounted(() => {
       />
       <Grid1x2>
         <GridColumn>
-          <WHeader variant="h2" align="start"> Personal info </WHeader>
+          <WHeader variant="h2" align="start">
+            Personal info
+          </WHeader>
           <KeyValueTable :table="personal" />
         </GridColumn>
         <GridColumn>
-          <WHeader variant="h2" align="start"> My Stack </WHeader>
+          <WHeader variant="h2" align="start">
+            My Stack
+          </WHeader>
           <TechStack :techs="techs" />
         </GridColumn>
       </Grid1x2>
@@ -62,7 +66,9 @@ onMounted(() => {
       <ProjectsShowcase :projects="projects" />
     </PageSection>
     <PageSection color="base2">
-      <WHeader align="center" variant="h2"> Get in contact </WHeader>
+      <WHeader align="center" variant="h2">
+        Get in contact
+      </WHeader>
       <Contacts :contacts="contacts" />
     </PageSection>
   </main>

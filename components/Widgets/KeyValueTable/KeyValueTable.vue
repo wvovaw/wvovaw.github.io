@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import KeyValueList from "./KeyValueList.vue";
-import { type KVList } from "./types";
+import type { KVList } from "./types";
 
 interface PersonalInfoProps {
   table: KVList[];
@@ -18,6 +18,7 @@ const colsNumber = computed(() => {
       return "grid-cols-3";
     case 4:
       return "grid-cols-4";
+    default: return undefined;
   }
 });
 </script>

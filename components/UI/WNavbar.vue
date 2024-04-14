@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { type Link } from "@/types";
+import type { Link } from "@/types";
 
 interface MenuLink extends Link {
   id: number;
@@ -19,8 +19,9 @@ defineProps<{
       <NuxtLink
         to="/"
         class="mx-5 hidden font-sans text-5xl font-semibold antialiased sm:block"
-        v-text="sitename"
-      />
+      >
+        {{ sitename }}
+      </NuxtLink>
       <nav
         role="navigation"
         class="text-normal mx-5 flex h-min w-full justify-around font-semibold sm:w-1/2 sm:text-xl md:w-1/3 lg:text-2xl"
