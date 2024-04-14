@@ -11,8 +11,8 @@ export default {
   ],
   theme: {
     fontFamily: {
-      sans: ["'Josefin Sans'", "sans-serif"],
-      roboto: "Roboto",
+      sans: ["'Barlow'", "sans-serif"],
+      josefin: "Josefin Sans",
     },
   },
   plugins: [typography, daisyui],

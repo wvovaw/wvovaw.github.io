@@ -50,7 +50,7 @@ const colorClass = computed(() => {
 <template>
   <div
     :id="anchor"
-    class="relative mb-20 mt-10 w-full text-center uppercase"
+    class="relative mb-20 mt-10 w-full text-center uppercase font-josefin"
     :class="alignClass"
   >
     <h1

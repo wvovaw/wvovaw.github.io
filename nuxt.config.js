@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     "@": fileURLToPath(new URL(".", import.meta.url)),
   },
   devtools: { enabled: false },
-  css: ["@/assets/css/roboto.css", "@/assets/css/josefin.css"],
+  css: ["@/assets/css/josefin.css", "@/assets/css/barlow.css"],
   modules: ["@nuxtjs/tailwindcss", "nuxt-icon", "@nuxt/image", "@nuxt/content"],
   components: {
     dirs: [],

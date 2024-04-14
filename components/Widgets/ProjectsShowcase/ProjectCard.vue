@@ -12,7 +12,7 @@ defineProps<ProjectCardProps>();
 <template>
   <div class="flex justify-center">
     <div
-      class="flex flex-col rounded-lg border border-base-content bg-neutral shadow-lg lg:flex-row"
+      class="flex flex-col rounded-lg border border-base-content bg-base-300 text-base-content shadow-lg lg:flex-row"
     >
       <img
         class="w-full rounded-t-lg object-fill lg:h-auto lg:max-w-lg lg:rounded-none lg:rounded-l-lg"

@@ -18,7 +18,7 @@ onMounted(() => {
   >
     <div v-if="showText" class="mx-5 max-w-5xl text-neutral-content">
       <p
-        class="mb-12 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl"
+        class="mb-12 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl font-josefin"
       >
         {{ headline }}
       </p>

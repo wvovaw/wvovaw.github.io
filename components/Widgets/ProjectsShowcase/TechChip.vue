@@ -39,7 +39,7 @@ const colorClass = computed(() => {
 <template>
   <div class="badge gap-2" :class="colorClass">
     <Icon :name="tech.icon" class="inline-block h-4 w-4" />
-    <label class="my-3 font-roboto font-bold">
+    <label class="my-3 font-bold">
       {{ tech.title }}
     </label>
   </div>

@@ -78,7 +78,7 @@ const classList = computed(() => [
   <component
     :is="variant"
     :id="anchor"
-    class="scroll-m-20 tracking-tight"
+    class="scroll-m-20 tracking-tight font-josefin"
     :class="classList"
   >
     <slot />

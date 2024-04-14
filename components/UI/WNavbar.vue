@@ -14,11 +14,11 @@ defineProps<{
 <template>
   <div class="w-full px-5">
     <header
-      class="mx-auto my-5 flex h-24 max-w-7xl -skew-x-12 items-center justify-between bg-neutral font-medium text-neutral-content mix-blend-screen backdrop-blur-lg"
+      class="mx-auto my-5 flex h-24 max-w-7xl -skew-x-12 items-center justify-between bg-neutral font-medium font-josefin text-neutral-content mix-blend-screen backdrop-blur-lg"
     >
       <NuxtLink
         to="/"
-        class="mx-5 hidden font-sans text-5xl font-semibold antialiased sm:block"
+        class="mx-5 hidden text-5xl font-semibold antialiased sm:block"
       >
         {{ sitename }}
       </NuxtLink>
