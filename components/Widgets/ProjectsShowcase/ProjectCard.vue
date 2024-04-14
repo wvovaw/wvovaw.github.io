@@ -36,16 +36,16 @@ defineProps<ProjectCardProps>();
           />
         </div>
         <div class="mt-auto flex flex-row flex-wrap gap-3">
-          <NuxtLink
+          <a
             v-for="link of project.links"
             :key="link.url"
-            :to="link.url"
+            :href="link.url"
             :target="link.target"
           >
             <WButton :icon-start="link.icon" :color="link.color">
               {{ link.title }}
             </WButton>
-          </NuxtLink>
+          </a>
         </div>
       </div>
     </div>
