@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import HeroCanvas from "./HeroCanvas.vue";
-import HeroBody from "./HeroBody.vue";
+import HeroCanvas from "./Canvas.vue";
+import HeroBody from "./Body.vue";
 
 defineProps<{
   headline: string;

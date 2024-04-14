@@ -1,15 +1,16 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import { fileURLToPath } from "node:url";
+
 export default defineNuxtConfig({
+  alias: {
+    "@": fileURLToPath(new URL(".", import.meta.url)),
+  },
+  devtools: { enabled: false },
   css: ["@/assets/css/roboto.css", "@/assets/css/josefin.css"],
-  devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss", "nuxt-icon", "@nuxt/image"],
+  modules: ["@nuxtjs/tailwindcss", "nuxt-icon", "@nuxt/image", "@nuxt/content"],
   components: {
     dirs: [],
   },
   app: {
     baseURL: "/",
-  },
-  routeRules: {
-    "/blog": {prerender: false}
   },
 });

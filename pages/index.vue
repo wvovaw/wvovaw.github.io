@@ -1,22 +1,33 @@
 <script setup lang="ts">
-import TechStack from "../components/Widgets/TechStack/index.vue";
-import Contacts from "../components/Widgets/Contacts/index.vue";
-import PageSection from "@/components/PageSection.vue";
-import { Grid1x2, Column } from "@/components/Grids";
-import DoubleHeader from "@/components/DoubleHeader.vue";
-import { WHeader } from "@/components/UI";
-import HeroGLSL from "@/components/Widgets/HeroGLSL/index.vue";
-import KeyValueTable from "@/components/Widgets/KeyValueTable/index.vue";
-import ProjectsShowcase from "@/components/Widgets/ProjectsShowcase/index.vue";
+import { PageSection, WNavbar, WFooter, DoubleHeader, WHeader } from "@/components/UI"
+import { TechStack, Contacts, KeyValueTable, ProjectsShowcase, HeroGLSL } from "@/components/Widgets";
+import { Grid1x2, GridColumn } from "@/components/Grids";
 
-import { homepageData } from "@/cms";
-const data = homepageData;
+const siteConfigData = await useAsyncData("site-config", () => queryContent('/site-config').findOne());
+const { sitename, navigation, footer } = siteConfigData.data.value!;
 
-const { headline, subheadline, shaderPath } = data.hero;
-const { personal, techs, projects, contacts } = data;
+const homepageData = await useAsyncData("homepage", () => queryContent('/homepage').findOne());
+const { headline, subheadline, shaderPath } = homepageData.data.value?.blocks.hero;
+const { personal, techs, projects, contacts } = homepageData.data.value?.blocks;
+
+const showNav = ref(false);
+onMounted(() => {
+  setTimeout(() => (showNav.value = true), 300);
+});
 </script>
 
 <template>
+  <Transition
+    enter-from-class="translate-y-[-10%]"
+    enter-active-class="transition duration-300 ease-out"
+  >
+    <WNavbar
+      v-if="showNav" 
+      class="absolute w-full"
+      :links="navigation.links"
+      :sitename="sitename"
+    />
+  </Transition>
   <main>
     <HeroGLSL
       :headline="headline"
@@ -31,14 +42,14 @@ const { personal, techs, projects, contacts } = data;
         anchor="about"
       />
       <Grid1x2>
-        <Column>
+        <GridColumn>
           <WHeader variant="h2" align="start"> Personal info </WHeader>
           <KeyValueTable :table="personal" />
-        </Column>
-        <Column>
+        </GridColumn>
+        <GridColumn>
           <WHeader variant="h2" align="start"> My Stack </WHeader>
           <TechStack :techs="techs" />
-        </Column>
+        </GridColumn>
       </Grid1x2>
     </PageSection>
     <PageSection color="base1">
@@ -55,4 +66,5 @@ const { personal, techs, projects, contacts } = data;
       <Contacts :contacts="contacts" />
     </PageSection>
   </main>
+  <WFooter :text="footer.text" />
 </template>
