@@ -165,7 +165,7 @@ blocks:
           target: _blank
           icon: material-symbols:open-in-new
           color: accent
-          url: /blog
+          url: https://wvovaw.github.io/blog
         - title: Source code
           target: _blank
           icon: simple-icons:git
