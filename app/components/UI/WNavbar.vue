@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Link } from "@/types";
+import type { Link } from "@types";
 
 interface MenuLink extends Link {
   id: number;

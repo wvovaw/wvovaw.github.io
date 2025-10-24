@@ -1,14 +1,21 @@
 <script setup lang="ts">
+import { Grid1x2, GridColumn } from "@/components/Grids";
 import { DoubleHeader, PageSection, WFooter, WHeader, WNavbar } from "@/components/UI";
 import { Contacts, HeroGLSL, KeyValueTable, ProjectsShowcase, TechStack } from "@/components/Widgets";
-import { Grid1x2, GridColumn } from "@/components/Grids";
 
-const siteConfigData = await useAsyncData("site-config", () => queryContent("/site-config").findOne());
+const siteConfigData = await useAsyncData(
+  "site-config",
+  () => queryCollection("siteConfig").first(),
+);
+const homepageData = await useAsyncData(
+  "homepage",
+  () => queryCollection("homepage").first(),
+);
+
 const { sitename, navigation, footer } = siteConfigData.data.value!;
 
-const homepageData = await useAsyncData("homepage", () => queryContent("/homepage").findOne());
-const { headline, subheadline, shaderPath } = homepageData.data.value?.blocks.hero;
-const { personal, techs, projects, contacts } = homepageData.data.value?.blocks;
+const { headline, subheadline, shaderPath } = homepageData.data.value!.blocks.hero;
+const { personal, techs, projects, contacts } = homepageData.data.value!.blocks;
 
 const showNav = ref(false);
 onMounted(() => {

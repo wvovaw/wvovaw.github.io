@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { HEXColorLink } from "@/types";
+import type { HEXColorLink } from "@types";
 
 interface IconLinkProps {
   link: HEXColorLink;

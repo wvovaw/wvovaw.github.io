@@ -1,9 +1,18 @@
 import type { UIColors } from "./ui";
 
+export interface NavLink {
+  id: number;
+  title: string;
+  url: string;
+  target?: "_self" | "_blank" | "_parent" | "_top";
+}
+
+export type TargetType = "_self" | "_blank" | "_parent" | "_top";
+
 export interface Link {
   url: string;
   title: string;
-  target?: "_self" | "_blank" | "_parent" | "_top";
+  target?: TargetType;
 }
 
 export interface IconLink extends Link {
@@ -36,6 +45,14 @@ export interface Project {
   techs: Tech[];
   image: Image;
   links: ButtonLink[];
+}
+
+export interface Contact {
+  title: string;
+  icon: string;
+  url: string;
+  target: TargetType;
+  color: UIColors;
 }
 
 export * from "./ui";

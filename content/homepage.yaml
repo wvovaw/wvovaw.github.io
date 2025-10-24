@@ -2,26 +2,25 @@ title: Homepage
 blocks:
   hero:
     shaderPath: ./shaders/silk.frag
-    headline: Hello and wellcome, my name is Vladimir
+    headline: Hello and wellcome, I'm Vladimir
     subheadline:
       I'm a fullstack developer. I create progressive web apps, SEO optimized
-      websites, telegram bots, CLI tools, etc. I'll build an app for you from scratch
-      and spin it up on a production environment.
+      websites, telegram mini apps and bots, CLI tools, etc. I build apps, spin it up on a production environment and maintan it.
   personal:
     -
       - key: Name
         value: Vladimir
       - key: Age
-        value: "24"
+        value: "26"
       - key: Experience
-        value: 4 years
+        value: 6 years
     -
       - key: Language
         value: Russian, English
       - key: Email
         value: wvovaw0@gmail.com
       - key: Telegram
-        value: "@gerserk"
+        value: "@frzephir"
   techs:
     - title: Javascript
       color: warning
@@ -43,7 +42,7 @@ blocks:
       color: success
       icon: mdi:vuejs
 
-    - title: Tailwindcss
+    - title: Tailwind
       color: info
       icon: simple-icons:tailwindcss
 

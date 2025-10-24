@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type { Tech } from "@/types";
+import type { Tech } from "@types";
 
-interface TechChipProps {
+interface TechCardProps {
   tech: Tech;
 }
-const props = defineProps<TechChipProps>();
+const props = defineProps<TechCardProps>();
 
 const colorClass = computed(() => {
   switch (props.tech.color) {
@@ -37,10 +37,20 @@ const colorClass = computed(() => {
 </script>
 
 <template>
-  <div class="badge gap-2" :class="colorClass">
-    <Icon :name="tech.icon" class="inline-block h-4 w-4" />
-    <label class="my-3 font-bold">
-      {{ tech.title }}
-    </label>
+  <div class="flex justify-center">
+    <div
+      class="block h-fit rounded-lg p-2 text-center text-neutral-content shadow-lg backdrop-invert lg:h-32 lg:w-32"
+      :class="colorClass"
+    >
+      <div class="m-0 lg:m-3">
+        <h5 class="text-xs font-normal leading-tight lg:text-xl">
+          {{ tech.title }}
+        </h5>
+        <Icon
+          :name="tech.icon"
+          class="m-2 mb-0 flex h-10 w-10 justify-center lg:h-16 lg:w-16"
+        />
+      </div>
+    </div>
   </div>
 </template>

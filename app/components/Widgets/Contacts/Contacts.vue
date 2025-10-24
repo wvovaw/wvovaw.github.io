@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import ContactLink from "./ContactLink.vue";
-import type { IconLink } from "@/types";
+import type { IconLink } from "@types";
 import { HFlex } from "@/components/Grids";
 
 interface ContactsProps {

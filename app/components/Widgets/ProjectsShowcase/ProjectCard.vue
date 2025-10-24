@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import TechChip from "./TechChip.vue";
+import type { Project } from "@types";
 import { WButton } from "@/components/UI";
-import type { Project } from "@/types";
+import TechChip from "./TechChip.vue";
 
 interface ProjectCardProps {
   project: Project;
