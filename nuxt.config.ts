@@ -1,4 +1,5 @@
 import { fileURLToPath } from "node:url";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
   alias: {
@@ -6,17 +7,24 @@ export default defineNuxtConfig({
     "@types": fileURLToPath(new URL("./types", import.meta.url)),
   },
   compatibilityDate: "2025-10-24",
-  css: ["@/assets/css/josefin.css", "@/assets/css/barlow.css"],
+  css: ["@/assets/css/tailwind.css", "@/assets/css/josefin.css", "@/assets/css/barlow.css"],
   modules: [
-    "@nuxtjs/tailwindcss",
     "@nuxt/icon",
     "@nuxt/image",
     "@nuxt/content",
   ],
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ],
+  },
   components: {
     dirs: [],
   },
   app: {
     baseURL: "/",
+  },
+  icon: {
+    cssLayer: "nuxt-icon",
   },
 });
