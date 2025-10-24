@@ -8,11 +8,7 @@ export default defineNuxtConfig({
   },
   compatibilityDate: "2025-10-24",
   css: ["@/assets/css/tailwind.css", "@/assets/css/josefin.css", "@/assets/css/barlow.css"],
-  modules: [
-    "@nuxt/icon",
-    "@nuxt/image",
-    "@nuxt/content",
-  ],
+  modules: ["@nuxt/icon", "@nuxt/image", "@nuxt/content", "nuxt-umami"],
   vite: {
     plugins: [
       tailwindcss(),
@@ -26,5 +22,10 @@ export default defineNuxtConfig({
   },
   icon: {
     cssLayer: "nuxt-icon",
+  },
+  umami: {
+    id: "0f45b084-979d-4b99-8041-5e4b0cadfa1f",
+    host: "https://umami.qpup.ru",
+    autoTrack: true,
   },
 });
