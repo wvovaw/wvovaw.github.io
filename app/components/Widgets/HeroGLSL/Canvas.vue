@@ -35,6 +35,7 @@ const canvas = ref(null);
 <template>
   <canvas
     ref="canvas"
+    data-allow-mismatch
     class="glsl-canvas absolute -z-30 h-full w-full"
     :data-fragment-url="fragmentUrl"
     :options="options"
