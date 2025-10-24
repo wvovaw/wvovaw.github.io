@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import KeyValueList from "./KeyValueList.vue";
 import type { KVList } from "./types";
+import KeyValueList from "./KeyValueList.vue";
 
 interface PersonalInfoProps {
   table: KVList[];

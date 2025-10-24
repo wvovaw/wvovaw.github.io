@@ -1,8 +1,8 @@
-import WButton from "./WButton.vue";
-import WHeader from "./WHeader.vue";
-import WFooter from "./WFooter.vue";
-import WNavbar from "./WNavbar.vue";
-import PageSection from "./PageSection.vue";
 import DoubleHeader from "./DoubleHeader.vue";
+import PageSection from "./PageSection.vue";
+import WButton from "./WButton.vue";
+import WFooter from "./WFooter.vue";
+import WHeader from "./WHeader.vue";
+import WNavbar from "./WNavbar.vue";
 
-export { WButton, WHeader, WFooter, PageSection, WNavbar, DoubleHeader };
+export { DoubleHeader, PageSection, WButton, WFooter, WHeader, WNavbar };

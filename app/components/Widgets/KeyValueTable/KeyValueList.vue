@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import KeyValue from "./KeyValue.vue";
 import type { KVList } from "./types";
+import KeyValue from "./KeyValue.vue";
 
 interface KeyValueListProps {
   list: KVList;
