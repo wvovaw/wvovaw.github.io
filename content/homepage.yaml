@@ -4,8 +4,8 @@ blocks:
     shaderPath: ./shaders/silk.frag
     headline: Hello and wellcome, I'm Vladimir
     subheadline:
-      I'm a fullstack developer. I create progressive web apps, SEO optimized
-      websites, telegram mini apps and bots, CLI tools, etc. I build apps, spin it up on a production environment and maintan it.
+      I build progressive web apps, SEO-optimized websites, Telegram Mini Apps and bots.
+      I develop, deploy, and maintain production-ready applications end-to-end.
   personal:
     -
       - key: Name
@@ -22,41 +22,49 @@ blocks:
       - key: Telegram
         value: "@frzephir"
   techs:
-    - title: Javascript
-      color: warning
-      icon: mdi:language-javascript
-
     - title: Typescript
-      color: info
+      color: primary
       icon: mdi:language-typescript
 
     - title: CSS
-      color: primary
+      color: secondary
       icon: simple-icons:css3
-
-    - title: SCSS
-      color: error
-      icon: simple-icons:sass
-
-    - title: Vue
-      color: success
-      icon: mdi:vuejs
 
     - title: Tailwind
       color: info
       icon: simple-icons:tailwindcss
 
+    - title: Vue
+      color: success
+      icon: mdi:vuejs
+
     - title: Nuxt
       color: success
       icon: simple-icons:nuxtdotjs
+
+    - title: SCSS
+      color: error
+      icon: simple-icons:sass
 
     - title: Astro
       color: neutral
       icon: simple-icons:astro
 
-    - title: Strapi
-      color: primary
-      icon: simple-icons:strapi
+    - title: React
+      color: info
+      icon: simple-icons:react
+
+    - title: Hono
+      color: accent
+      icon: simple-icons:hono
+
+    - title: Docker
+      color: info
+      icon: simple-icons:docker
+
+    - title: Bun
+      color: base-content
+      icon: simple-icons:bun
 
     - title: Deno
       color: neutral
@@ -98,27 +106,29 @@ blocks:
         - title: Tailwind
           color: info
           icon: simple-icons:tailwindcss
+        - title: Bun
+          color: base-content
+          icon: simple-icons:bun
         - title: Fastify
           color: base3
           icon: simple-icons:fastify
-        - title: Prisma
+        - title: Drizzle
           color: neutral
-          icon: simple-icons:prisma
+          icon: simple-icons:drizzle
+        - title: Docker
+          color: info
+          icon: simple-icons:docker
 
       links:
         - title: Play it!
           target: _blank
           icon: ph:cursor-click-light
           color: accent
-          url: https://wvovaw-button.vercel.app
-        - title: Frontend
+          url: https://btn.qpup.ru/
+        - title: Code
           target: _blank
           icon: simple-icons:git
           url: https://github.com/wvovaw/the-button
-        - title: Backend
-          target: _blank
-          icon: simple-icons:git
-          url: https://github.com/wvovaw/the-button-backend
       image:
         src: images/thebutton.png
         alt: The button game screenshot
@@ -132,18 +142,20 @@ blocks:
         - title: Nuxt
           color: success
           icon: simple-icons:nuxtdotjs
-        - title: Tailwindcss
+        - title: Tailwind
           color: info
           icon: simple-icons:tailwindcss
         - title: Strapi
           color: primary
           icon: simple-icons:strapi
+        - title: Nginx
+          color: success
+          icon: simple-icons:nginx
       links:
-        - title: Check this out
+        - title: The project is closed
           target: _blank
           icon: material-symbols:open-in-new
           color: accent
-          url: https://wasd.market
       image:
         src: images/wasdmarket.png
         alt: wasdmarket screenshot
@@ -183,7 +195,7 @@ blocks:
         - title: Nuxt
           color: success
           icon: simple-icons:nuxtdotjs
-        - title: Tailwindcss
+        - title: Tailwind
           color: info
           icon: simple-icons:tailwindcss
         - title: Deno
@@ -205,15 +217,9 @@ blocks:
         alt: Mars gallery screenshot
 
   contacts:
-    - title: Discord
-      icon: simple-icons:discord
-      url: https://discordapp.com/users/287283242854383618
-      target: _blank
-      color: "#7289DA"
-
     - title: Telegram
       icon: simple-icons:telegram
-      url: https://t.me/@gerserk
+      url: https://t.me/@frzephir
       target: _blank
       color: "#229ED9"
 
