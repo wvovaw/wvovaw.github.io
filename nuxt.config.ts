@@ -21,7 +21,7 @@ export default defineNuxtConfig({
     baseURL: "/",
   },
   icon: {
-    cssLayer: "nuxt-icon",
+    cssLayer: "components",
   },
   umami: {
     id: "0f45b084-979d-4b99-8041-5e4b0cadfa1f",
