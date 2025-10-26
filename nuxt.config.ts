@@ -20,6 +20,12 @@ export default defineNuxtConfig({
   app: {
     baseURL: "/",
   },
+  nitro: {
+    prerender: {
+      crawlLinks: false,
+      routes: [],
+    },
+  },
   icon: {
     cssLayer: "components",
   },
