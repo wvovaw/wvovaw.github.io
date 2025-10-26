@@ -24,6 +24,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
         with:
@@ -42,11 +47,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-bun-
 
-      - name: Install dependencies
+      - name: Install dependencies with Bun
         run: bun install --frozen-lockfile
 
-      - name: Build static site
-        run: bun run generate
+      - name: Build static site (Node runtime)
+        run: npx nuxt generate
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
