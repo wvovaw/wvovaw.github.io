@@ -1,8 +1,4 @@
 <script setup lang="ts">
-import { Grid1x2, GridColumn } from "@/components/Grids";
-import { DoubleHeader, PageSection, WFooter, WHeader, WNavbar } from "@/components/UI";
-import { Contacts, HeroGLSL, KeyValueTable, ProjectsShowcase, TechStack } from "@/components/Widgets";
-
 const siteConfigData = await useAsyncData(
   "site-config",
   () => queryCollection("siteConfig").first(),
@@ -28,7 +24,7 @@ onMounted(() => {
     enter-from-class="translate-y-[-10%]"
     enter-active-class="transition duration-300 ease-out"
   >
-    <WNavbar
+    <UIWNavbar
       v-if="showNav"
       class="absolute w-full"
       :links="navigation.links"
@@ -36,48 +32,48 @@ onMounted(() => {
     />
   </Transition>
   <main>
-    <HeroGLSL
+    <WidgetsHero
       :headline="headline"
       :subheadline="subheadline"
       :fragment-url="shaderPath"
     />
-    <PageSection color="base2">
-      <DoubleHeader
+    <UIPageSection color="base2">
+      <UIDoubleHeader
         text1="About me"
         text2="Resume"
         color="success"
         anchor="about"
       />
-      <Grid1x2>
-        <GridColumn>
-          <WHeader variant="h2" align="start">
+      <GridsGrid1x2>
+        <GridsColumn>
+          <UIWHeader variant="h2" align="start">
             Personal info
-          </WHeader>
-          <KeyValueTable :table="personal" />
-        </GridColumn>
-        <GridColumn>
-          <WHeader variant="h2" align="start">
+          </UIWHeader>
+          <WidgetsKeyValueTable :table="personal" />
+        </GridsColumn>
+        <GridsColumn>
+          <UIWHeader variant="h2" align="start">
             My Stack
-          </WHeader>
-          <TechStack :techs="techs" />
-        </GridColumn>
-      </Grid1x2>
-    </PageSection>
-    <PageSection color="base1">
-      <DoubleHeader
+          </UIWHeader>
+          <WidgetsTechStack :techs="techs" />
+        </GridsColumn>
+      </GridsGrid1x2>
+    </UIPageSection>
+    <UIPageSection color="base1">
+      <UIDoubleHeader
         text1="My works"
         text2="Projects"
         color="accent"
         anchor="projects"
       />
-      <ProjectsShowcase :projects="projects" />
-    </PageSection>
-    <PageSection color="base2">
-      <WHeader align="center" variant="h2">
+      <WidgetsProjectsShowcase :projects="projects" />
+    </UIPageSection>
+    <UIPageSection color="base2">
+      <UIWHeader align="center" variant="h2">
         Get in contact
-      </WHeader>
-      <Contacts :contacts="contacts" />
-    </PageSection>
+      </UIWHeader>
+      <WidgetsContacts :contacts="contacts" />
+    </UIPageSection>
   </main>
-  <WFooter :text="footer.text" />
+  <UIWFooter :text="footer.text" />
 </template>

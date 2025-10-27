@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { KVList } from "./types";
-import KeyValue from "./KeyValue.vue";
+import KeyValueItem from "./KeyValueItem.vue";
 
 interface KeyValueListProps {
   list: KVList;
@@ -15,7 +15,7 @@ defineProps<KeyValueListProps>();
       :key="kv.key + kv.value"
       class="w-full overflow-visible border-b border-base-content py-4 text-sm font-normal last-of-type:border-b-0 sm:px-6 xl:text-lg"
     >
-      <KeyValue :key-value="kv" />
+      <KeyValueItem :key-value="kv" />
     </li>
   </ul>
 </template>

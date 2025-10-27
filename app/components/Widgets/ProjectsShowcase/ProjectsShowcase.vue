@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { Project } from "@types";
-import ProjectCard from "./ProjectCard.vue";
+import ProjectCard from "./ProjectShowcaseCard.vue";
 
 interface ProjectShowcaseProps {
   projects: Project[];

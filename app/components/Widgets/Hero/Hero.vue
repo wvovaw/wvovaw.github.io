@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import HeroBody from "./Body.vue";
-import HeroCanvas from "./Canvas.vue";
+import HeroBody from "./HeroBody.vue";
+import HeroGLSLCanvas from "./HeroGLSLCanvas.vue";
 
 defineProps<{
   headline: string;
@@ -11,7 +11,7 @@ defineProps<{
 
 <template>
   <div class="grid h-screen w-full place-content-center">
-    <HeroCanvas :fragment-url="fragmentUrl" />
+    <HeroGLSLCanvas :fragment-url="fragmentUrl" />
     <HeroBody :headline="headline" :subheadline="subheadline">
       <slot />
     </HeroBody>

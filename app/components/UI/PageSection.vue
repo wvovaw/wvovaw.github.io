@@ -2,7 +2,7 @@
 import type { UIColors } from "@types";
 
 interface PageSectionProps {
-  color: UIColors | "base1" | "base2" | "base3";
+  color?: UIColors | "base1" | "base2" | "base3";
 }
 const props = withDefaults(defineProps<PageSectionProps>(), {
   color: "base1",

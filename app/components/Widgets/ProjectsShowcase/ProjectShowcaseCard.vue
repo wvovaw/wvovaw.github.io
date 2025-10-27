@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type { Project } from "@types";
-import { WButton } from "@/components/UI";
-import TechChip from "./TechChip.vue";
+import TechChip from "./ProjectShowcaseTechChip.vue";
 
 interface ProjectCardProps {
   project: Project;
@@ -42,9 +41,9 @@ defineProps<ProjectCardProps>();
             :href="link.url"
             :target="link.target"
           >
-            <WButton :icon-start="link.icon" :color="link.color">
+            <UIWButton :icon-start="link.icon" :color="link.color">
               {{ link.title }}
-            </WButton>
+            </UIWButton>
           </a>
         </div>
       </div>
