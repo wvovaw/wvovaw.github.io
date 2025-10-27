@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { queryCollection } from "#imports";
 import { Grid1x2, GridColumn } from "@/components/Grids";
 import { DoubleHeader, PageSection, WFooter, WHeader, WNavbar } from "@/components/UI";
 import { Contacts, HeroGLSL, KeyValueTable, ProjectsShowcase, TechStack } from "@/components/Widgets";
