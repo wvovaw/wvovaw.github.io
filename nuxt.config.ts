@@ -6,8 +6,8 @@ export default defineNuxtConfig({
     "@": fileURLToPath(new URL("./app", import.meta.url)),
     "@types": fileURLToPath(new URL("./types", import.meta.url)),
   },
-  compatibilityDate: "2025-10-24",
   css: ["@/assets/css/tailwind.css", "@/assets/css/josefin.css", "@/assets/css/barlow.css"],
+  compatibilityDate: "2026-06-05",
   modules: ["@nuxt/icon", "@nuxt/image", "@nuxt/content", "nuxt-umami"],
   vite: {
     plugins: [
